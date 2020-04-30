@@ -1,6 +1,10 @@
 # Sorting Algorithm Performance Evaluator <!-- omit in toc -->
 >Sorting algorithm perfomance assessment developer tool
 
+- [Introduction](#introduction)
+- [Aim and purpose](#aim-and-purpose)
+  - [Research questions](#research-questions)
+- [Tasks](#tasks)
 
 ## Introduction
 
