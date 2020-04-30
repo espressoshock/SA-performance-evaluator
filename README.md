@@ -22,8 +22,18 @@ Currently available algorithms evaluators lack the most important features that 
 ## Tasks
 
 First draft - _Total 104hrs_.
-
-- [ ]  Create project's structure and working tools (Setup working environment) **{8 HRS}** 
+___
+- [x]  Create project's structure and working tools (Setup working environment) **{8 HRS}** `#PRM#1 04/30/2020`
+  - [x]  ~~Github Repo Setup~~
+  - [x]  ~~Github Readme~~
+  - [x]  ~~Github License~~
+  - [x]  ~~Github KIB~~
+  - [x]  ~~GitkrakenGlo Github KIB Sync~~
+  - [x]  ~~GitGlow TaskLink & Sync~~
+  - [x]  ~~KIB Tasks & Labels~~
+  - [x]  ~~KIB M#1 Milestone setup~~
+  - [x]  ~~Timeline Setup w/ milestones~~
+  - [ ]  **Team members invitation to KIB & Working setup** :red_circle:
 - [ ]  Create testing units **{8 HRS}**
 - [ ]  Create mock database's classes **{8 HRS}**
 - [ ]  Sorting algorithm research and implementation in Java **{40 HRS}**
