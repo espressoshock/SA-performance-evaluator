@@ -15,3 +15,16 @@ Currently available algorithms evaluators lack the most important features that 
 2. What commonly used sorting algorithm performs the best at sorting non-primitive datatypes?
 3. Serial Sort versus Parallel Sort – Which one is better and when?
 
+## Tasks
+
+First draft - _Total 104hrs_.
+
+- [ ]  Create project's structure and working tools (Setup working environment) **{8 HRS}** 
+- [ ]  Create testing units **{8 HRS}**
+- [ ]  Create mock database's classes **{8 HRS}**
+- [ ]  Sorting algorithm research and implementation in Java **{40 HRS}**
+  - [ ]  RESEARCH (Introduction and RQ definition) 
+  - [ ]  IMPLEMENTATION (Heap, merge, shell, quick)
+- [ ] Meeting planning & TO DO definition **{16 HRS}**
+- [ ] Preparation for (each) release **{16 HRS}**
+- [ ] Run testing and assure working deployable version **{8 HRS}**
