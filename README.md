@@ -41,3 +41,64 @@ First draft - _Total 104hrs_.
 - [ ] Meeting planning & TO DO definition **{16 HRS}**
 - [ ] Preparation for (each) release **{16 HRS}**
 - [ ] Run testing and assure working deployable version **{8 HRS}**
+
+## TDD
+
+Starting by developing the structure and the UnitTest
+
+### Method 
+
+Creat the logic and implemt it in tests
+
+## Velocity
+
+### First Iteration
+
+Team Member                 Ideal Hours           Real Time            Velocity
+
+Vincenzo Buono             |                     |                    |
+Nemanja Negovanovic        |                     |                    |
+Alex Oachesu               |                     |                    |
+Christopher Schroter       |                     |                    |
+Team                       |                     |                    |
+
+### Second Iteration
+
+Team Member                 Ideal Hours           Real Time            Velocity
+
+Vincenzo Buono             |                     |                    |
+Nemanja Negovanovic        |                     |                    |
+Alex Oachesu               |                     |                    |
+Christopher Schroter       |                     |                    |
+Team                       |                     |                    |
+
+### Third Iteration
+
+Team Member                 Ideal Hours           Real Time            Velocity
+
+Vincenzo Buono             |                     |                    |
+Nemanja Negovanovic        |                     |                    |
+Alex Oachesu               |                     |                    |
+Christopher Schroter       |                     |                    |
+Team                       |                     |                    |
+
+### Presentation
+
+Team Member                 Ideal Hours           Real Time            Velocity
+
+Vincenzo Buono             |                     |                    |
+Nemanja Negovanovic        |                     |                    |
+Alex Oachesu               |                     |                    |
+Christopher Schroter       |                     |                    |
+Team                       |                     |                    |
+
+### Project
+
+Team Member                 Ideal Hours           Real Time            Velocity
+
+Vincenzo Buono             |                     |                    |
+Nemanja Negovanovic        |                     |                    |
+Alex Oachesu               |                     |                    |
+Christopher Schroter       |                     |                    |
+Team                       |                     |                    |
+
