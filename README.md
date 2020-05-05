@@ -5,6 +5,14 @@
 - [Aim and purpose](#aim-and-purpose)
   - [Research questions](#research-questions)
 - [Tasks](#tasks)
+- [TDD](#tdd)
+- [Method](#method)
+- [Velocity](#velocity)
+  - [First Iteration](#first-iteration)
+  - [Second Iteration](#second-iteration)
+  - [Third Iteration](#third-iteration)
+  - [Presentation](#presentation)
+  - [Project](#project)
 
 ## Introduction
 
