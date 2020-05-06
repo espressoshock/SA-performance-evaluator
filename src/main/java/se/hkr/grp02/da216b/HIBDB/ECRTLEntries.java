@@ -1,4 +1,4 @@
-package se.hkr.grp02.da216b.algorithms.HIBDB;
+package se.hkr.grp02.da216b.HIBDB;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

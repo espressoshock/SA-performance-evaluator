@@ -3,7 +3,7 @@ package se.hkr.grp02.da216b.algorithms.mergeSort;
 /***
  * MERGESORT - RECURSIVE IMPL.
  */
-public class mergeSortRecursive {
+public class MergeSortRecursive {
     ///////******** =IMPORTED ///////********
     private final static String NAME = "merge";//-> updated to static
 
