@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +55,44 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="se.hkr.grp02.da216b.workloads" />
+      <recent name="se.hkr.grp02.da216b.utilities" />
+      <recent name="se.hkr.grp02.da216b.methods" />
+      <recent name="se.hkr.grp02.da216b.algorithms" />
+      <recent name="se.hkr.grp02.da216b" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in sa-performance-evaluator">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.Main" />
+      <module name="sa-performance-evaluator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.hkr.grp02.da216b.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in sa-performance-evaluator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sa-performance-evaluator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in sa-performance-evaluator" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -48,33 +104,57 @@
       <option name="presentableId" value="Default" />
       <updated>1588740894289</updated>
       <workItem from="1588740896917" duration="4393000" />
+      <workItem from="1588775182864" duration="1384000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="1637" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1588744652313">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1637" y="232" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588744652313" />
-    <state width="1410" height="278" key="GridCell.Tab.0.bottom" timestamp="1588746450708">
+    <state x="1072" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588776207139">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state width="1410" height="278" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450708" />
-    <state width="1410" height="278" key="GridCell.Tab.0.center" timestamp="1588746450707">
+    <state x="1072" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776207139" />
+    <state x="1234" y="392" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588776460776">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state width="1410" height="278" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450707" />
-    <state width="1410" height="278" key="GridCell.Tab.0.left" timestamp="1588746450707">
+    <state x="1234" y="392" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776460776" />
+    <state x="1260" y="421" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1588776211946">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state width="1410" height="278" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450707" />
-    <state width="1410" height="278" key="GridCell.Tab.0.right" timestamp="1588746450707">
+    <state x="1260" y="421" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776211946" />
+    <state width="1340" height="278" key="GridCell.Tab.0.bottom" timestamp="1588776524554">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state width="1410" height="278" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450707" />
+    <state width="1340" height="278" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
+    <state width="1340" height="278" key="GridCell.Tab.0.center" timestamp="1588776524553">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1340" height="278" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
+    <state width="1340" height="278" key="GridCell.Tab.0.left" timestamp="1588776524553">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1340" height="278" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
+    <state width="1340" height="278" key="GridCell.Tab.0.right" timestamp="1588776524554">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1340" height="278" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
     <state x="1333" y="173" key="SettingsEditor" timestamp="1588746443692">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>

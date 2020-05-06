@@ -1,5 +1,7 @@
 package se.hkr.grp02.da216b;
 
+import se.hkr.grp02.da216b.methods.RunSortingAlgorithms;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +13,7 @@ public class Main {
 
         while(running){
             ///////******** IMPORT AND =UNCOMMENT ///////********
-            //new RunSortingAlgorithms().run();
+            new RunSortingAlgorithms().run();
             ///////******** IMPORT AND =UNCOMMENT ///////********
             System.out.println("Continue ?\n[1]    YES\n[any key]    NO");
             int choice = scanner.nextInt();
