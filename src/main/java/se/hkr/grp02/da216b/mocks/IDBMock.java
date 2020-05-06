@@ -4,5 +4,5 @@ import se.hkr.grp02.da216b.utilities.Result;
 
 public interface IDBMock {
     Result[] returnResults();
-    void pushResult();
+    void pushResult(Result result);
 }
