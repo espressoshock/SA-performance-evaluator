@@ -18,6 +18,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1bWHOBCukcFyFCkNG1Zz8wTDiXf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,6 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -39,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588740894289</updated>
-      <workItem from="1588740896917" duration="3585000" />
+      <workItem from="1588740896917" duration="4393000" />
     </task>
     <servers />
   </component>
@@ -51,5 +59,25 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1637" y="232" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588744652313" />
+    <state width="1410" height="278" key="GridCell.Tab.0.bottom" timestamp="1588746450708">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1410" height="278" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450708" />
+    <state width="1410" height="278" key="GridCell.Tab.0.center" timestamp="1588746450707">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1410" height="278" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450707" />
+    <state width="1410" height="278" key="GridCell.Tab.0.left" timestamp="1588746450707">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1410" height="278" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450707" />
+    <state width="1410" height="278" key="GridCell.Tab.0.right" timestamp="1588746450707">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="1410" height="278" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746450707" />
+    <state x="1333" y="173" key="SettingsEditor" timestamp="1588746443692">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="1333" y="173" key="SettingsEditor/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588746443692" />
   </component>
 </project>
