@@ -33,11 +33,16 @@ First draft - _Total 104hrs_.
   - [x]  ~~KIB M#1 Milestone setup~~
   - [x]  ~~Timeline Setup w/ milestones~~
   - [x]  ~~Team members invitation to KIB & Working setup~~ 
-- [ ]  Create testing units **{8 HRS}**
-- [ ]  Create mock database's classes **{8 HRS}**
-- [ ]  Sorting algorithm research and implementation in Java **{40 HRS}**
-  - [ ]  RESEARCH (Introduction and RQ definition) 
-  - [ ]  IMPLEMENTATION (Heap, merge, shell, quick)
-- [ ] Meeting planning & TO DO definition **{16 HRS}**
+- [x] ~~Preparations for Project Meeting 2~~ `#PRM#2 05/07/2020` :bookmark:
+  - [x] ~~Create testing units **{8 HRS}**~~
+  - [x] ~~Create mock database's classes **{8 HRS}**~~
+  - [x] ~~Sorting algorithm research and implementation in Java **{40 HRS}**~~
+    - [x]~~RESEARCH (Introduction and RQ definition)~~ 
+    - [ ]  IMPLEMENTATION (Heap, merge, shell, quick)
+      -[x] ~~Merge Sort~~
+      -[x] ~~Heap Sort~~
+      -[ ] Shell Sort
+      -[ ] Quick Sort
+  - [ ] Meeting planning & TO DO definition **{16 HRS}**
 - [ ] Preparation for (each) release **{16 HRS}**
 - [ ] Run testing and assure working deployable version **{8 HRS}**
