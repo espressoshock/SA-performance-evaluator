@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [Aim and purpose](#aim-and-purpose)
   - [Research questions](#research-questions)
+- [Database](#database)
 - [Tasks](#tasks)
 
 ## Introduction
@@ -18,6 +19,13 @@ Currently available algorithms evaluators lack the most important features that 
 1. What commonly used sorting algorithm performs the best at sorting primitive datatypes?
 2. What commonly used sorting algorithm performs the best at sorting non-primitive datatypes?
 3. Serial Sort versus Parallel Sort – Which one is better and when?
+
+## Database
+
+For the following project a relational database MySQL v5.7 and the following ER and EER have been designed to fullfil the system requirements
+
+![EER Rev1A](./assets/SAPEvaluatorDB_EER_Model_REV1A.PNG)
+
 
 ## Tasks
 
