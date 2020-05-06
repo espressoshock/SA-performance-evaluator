@@ -36,4 +36,12 @@ public class IntWorkload {
     public int[] getWorkload() {
         return workload;
     }
+
+    public Integer[] getIntegerWorkload(){
+        Integer[] wrapper = new Integer[this.workload.length];
+        for (int i = 0; i < wrapper.length; i++){
+            wrapper[i] = workload[i];
+        }
+        return null;
+    }
 }

@@ -6,7 +6,7 @@ package se.hkr.grp02.da216b.algorithms.quickSort;
 public class QuickSortRecursiveFP {
     ///////******** =IMPORTED ///////********
     private final static String NAME = "quick"; //-> updated to static
-    public int[] sort(int[] workload) {
+  /* */ public int[] sort(int[] workload) {
         return workload;
     }
     public String[] sort(String[] workload) {
@@ -17,7 +17,6 @@ public class QuickSortRecursiveFP {
     }
     ///////******** =IMPORTED ///////********
 
-
     /**
      * used to start with the whole list and find the first left and right values
      *
@@ -27,7 +26,6 @@ public class QuickSortRecursiveFP {
     public static <E extends Comparable<? super E>> void sort(E[] array) {
         quickSort(array, 0, array.length - 1);// start the sort with the entire list
     }
-
 
     /**
      * used to sort partitions

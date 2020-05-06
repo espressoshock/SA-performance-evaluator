@@ -108,10 +108,26 @@ public class RunSortingAlgorithms {
      */
     public void testAlgorithms() {
         System.out.println("Enter the desired amount of iterations: ");
-        int iterations = scanner.nextInt();
-        while (iterations > 0) {
+        boolean integer;
+        int choice = 0;
+        do {
+            try {
+                integer = false;
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice < 1 || choice > 20) {
+                    System.out.println("\u001B[34m" + "Please choose between 1 and 20 iterations" + "\u001B[0m");
+                    integer = true;
+                }else{
+                    System.out.println("\u001B[34m" + "Valid input" + "\u001B[0m");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("\u001B[34m" + "Please enter a valid input" + "\u001B[0m");
+                integer = true;
+            }
+        } while (integer);
+        while (choice > 0) {
             runAlgorithms();
-            iterations--;
+            choice--;
         }
     }
 
@@ -135,7 +151,7 @@ public class RunSortingAlgorithms {
         if (algorithms.getMergeSort() != null) {
             if (workload.getIntWorkload() != null) {
                 timer.startTimer();
-                algorithms.getMergeSort().sort(workload.getIntWorkload().getWorkload());
+                algorithms.getMergeSort().sort(workload.getIntWorkload().getIntegerWorkload());
                 timer.stopTimer();
                 results.add(new Result(timer.getTime(), algorithms.getMergeSort().getNAME(), workload));
             } else if (workload.getStringWorkload() != null) {
@@ -177,14 +193,39 @@ public class RunSortingAlgorithms {
      * set the workload
      */
     public void chooseWorkload() {
-        System.out.println("Select: \n[1]    Average case\n[2]    Worst Case\n[3]    Both");
-        int choiceCaseLevel = scanner.nextInt();
-        System.out.println("Select: \n[1]    Integer\n[2]    String\n");
-        int choiceType = scanner.nextInt();
-        System.out.println("Select a number between 10 and 1.000.000 \nas the size of your workload ");
-        int choiceSize = scanner.nextInt();
-        createWorkload(choiceCaseLevel, choiceType, choiceSize);
-
+        boolean integer;
+        int two = 2;
+        int three = 3;
+        int[] choices = new int[3];
+        String[] prompts = {"Select: \n[1]    Average case\n[2]    Worst Case\n[3]    Both",
+                "Select: \n[1]    Integer\n[2]    String\n",
+                "Select a number between 10 and 1.000.000 \nas the size of your workload ",
+                "\u001B[34m" + "Valid input" + "\u001B[0m",
+                "\u001B[34m" + "Please enter a valid input" + "\u001B[0m"};
+       for(int i = 0; i < 3; i++) {
+           System.out.println(prompts[i]);
+           do {
+               try {
+                   integer = false;
+                   choices[i] = Integer.parseInt(scanner.nextLine());
+                   if (choices[i] < 1 || choices[i] > three) {
+                       System.out.println(prompts[4]);
+                       integer = true;
+                   }else{
+                       if (three == two){
+                           three = 1000000;
+                       }else{
+                           three = two;
+                           System.out.println(prompts[3]);
+                       }
+                   }
+               } catch (NumberFormatException e) {
+                   System.out.println(prompts[4]);
+                   integer = true;
+               }
+           } while (integer);
+       }
+        createWorkload(choices[0], choices[1], choices[2]);
     }
 
     /**
@@ -212,7 +253,24 @@ public class RunSortingAlgorithms {
      */
     public void chooseAlgorithms() {
         printAlgorithmsOptions();
-        setAlgorithms(scanner.nextInt());
+        boolean integer;
+        int choice = 0;
+        do {
+            try {
+                integer = false;
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice < 1 || choice > 15) {
+                    System.out.println("\u001B[34m" + "Please enter a valid input" + "\u001B[0m");
+                    integer = true;
+                }else{
+                    System.out.println("\u001B[34m" + "Valid input" + "\u001B[0m");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("\u001B[34m" + "Please enter a valid input" + "\u001B[0m");
+                integer = true;
+            }
+        } while (integer);
+        setAlgorithms(choice);
     }
 
     /**
