@@ -90,13 +90,13 @@ First draft - _Total 104hrs_.
 
 ## Test Driven Development
 
-At the beginning of the project we tried to understand what are the requirements and objectives of the first sprint and how they can be implemented. We built entities and established relationships between them. Then it was decided how they would relate. Based on these data we developed unit tests that initially failed. Then methods were developed and automatic testing was used.
+At the beginning of the project the requirements and objectives of the first sprint were analyzed. Entities were built and the relationships between them was established. Based on these data the unit tests were built. Methods were developed and automatic testing was used.
 
 ## Method
 
 ### Create the development environment 
 ### Diagrams
-### Intellij project
+### IntelliJ project
 ### Github repository
 ### GitKraken management
 ### Peer-Programming
@@ -107,7 +107,7 @@ At the beginning of the project we tried to understand what are the requirements
 ### Results
 
 ## Velocity
-The division of tasks was done in accordance with the estimated working time for a person (26 hours). At the end of each sprint, considering the ideal hours and those necessary to complete the tasks, the velocity was evaluated individually and for the team.
+The division of the tasks was done in accordance with the estimated working time for a person (26 hours). At the end of each sprint, considering the ideal hours and those necessary to complete the tasks, the velocity was evaluated individually and for the team.
 At the end of the project, the velocity is evaluated for the whole project. It is used to estimate the impact of peer-programming on individual and team efficiency.
 
 ### First iteration
