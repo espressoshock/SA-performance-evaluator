@@ -31,7 +31,7 @@ Currently available algorithms evaluators lack the most important features that 
 
 For the following project a relational database MySQL v5.7 and the following ER and EER have been designed to fullfil the system requirements
 
-![ER Rev1A](./assets/DB/SAPEvaluatorDB_ER_medium.png)
+![ER Rev1A](./assets/DB/SAPEvaluatorDB_ER_medium.PNG)
  
 ![EER Rev1A](./assets/DB/SAPEvaluatorDB_EER_Model_REV1A.PNG)
 
