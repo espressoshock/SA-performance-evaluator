@@ -97,23 +97,23 @@ Create the logic and implement it in tests
 
 ### First iteration
 
-| Team Member           | Ideal Hours   | Real Time  | Velocity |
-| ----------------------| -------------:|-----------:|---------:|
-| Vincenzo Buono        |               |            |          |
-| Nemanja Negovanovic   |               |            |          |
-| Alex Oachesu          |               |            |          |
-| Christopher Schroter  |               |            |          |
-| Team                  |               |            |          |
+| Team Member           | Ideal Hours   | Real Time  |    Velocity |
+| ----------------------| -------------:|-----------:|------------:|
+| Vincenzo Buono        |            26 |         26 |        1.00 |
+| Nemanja Negovanovic   |            26 |         25 |        1.04 |
+| Alex Oachesu          |            26 |         30 |        0.87 |
+| Christopher Schroter  |            26 |         26 |        1.00 |
+| **Team**              |       **104** |    **107** | **0.97avg** |
 
 ### Second iteration
 
-| Team Member           | Ideal Hours   | Real Time  | Velocity |
-| ----------------------| -------------:|-----------:|---------:|
-| Vincenzo Buono        |               |            |          |
-| Nemanja Negovanovic   |               |            |          |
-| Alex Oachesu          |               |            |          |
-| Christopher Schroter  |               |            |          |
-| Team                  |               |            |          |
+| Team Member           | Ideal Hours   | Real Time  |    Velocity |
+| ----------------------| -------------:|-----------:|------------:|
+| Vincenzo Buono        |            26 |         37 |        0.70 |
+| Nemanja Negovanovic   |            26 |         26 |        1.00 |
+| Alex Oachesu          |            26 |         28 |        0.93 |
+| Christopher Schroter  |            26 |         28 |        0.93 |
+| **Team**              |       **104** |    **119** | **0.89avg** |
 
 ### Third iteration
 
