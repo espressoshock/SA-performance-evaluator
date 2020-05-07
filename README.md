@@ -5,7 +5,6 @@
 - [Aim and purpose](#aim-and-purpose)
   - [Research questions](#research-questions)
 - [Database](#database)
-- [Tasks](#tasks)
 
 ## Introduction
 
@@ -27,30 +26,3 @@ For the following project a relational database MySQL v5.7 and the following ER 
 ![EER Rev1A](./assets/SAPEvaluatorDB_EER_Model_REV1A.PNG)
 
 
-## Tasks
-
-First draft - _Total 104hrs_.
-- [x]  Create project's structure and working tools (Setup working environment) **{8 HRS}** `#PRM#1 04/30/2020` :bookmark:
-  - [x]  ~~Github Repo Setup~~
-  - [x]  ~~Github Readme~~
-  - [x]  ~~Github License~~
-  - [x]  ~~Github KIB~~
-  - [x]  ~~GitkrakenGlo Github KIB Sync~~
-  - [x]  ~~GitGlow TaskLink & Sync~~
-  - [x]  ~~KIB Tasks & Labels~~
-  - [x]  ~~KIB M#1 Milestone setup~~
-  - [x]  ~~Timeline Setup w/ milestones~~
-  - [x]  ~~Team members invitation to KIB & Working setup~~ 
-- [x] ~~Preparations for Project Meeting 2~~ `#PRM#2 05/07/2020` :bookmark:
-  - [x] ~~Create testing units **{8 HRS}**~~
-  - [x] ~~Create mock database's classes **{8 HRS}**~~
-  - [x] ~~Sorting algorithm research and implementation in Java **{40 HRS}**~~
-    - [x] ~~RESEARCH (Introduction and RQ definition)~~ 
-    - [ ]  IMPLEMENTATION (Heap, merge, shell, quick)
-      - [x] ~~Merge Sort~~
-      - [x] ~~Heap Sort~~
-      - [ ] Shell Sort
-      - [ ] Quick Sort
-  - [ ] Meeting planning & TO DO definition **{16 HRS}**
-- [ ] Preparation for (each) release **{16 HRS}**
-- [ ] Run testing and assure working deployable version **{8 HRS}**
