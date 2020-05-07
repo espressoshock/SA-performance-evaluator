@@ -88,15 +88,27 @@ First draft - _Total 104hrs_.
   - [ ] Run testing and assure working deployable version **`3 HRS`**
   - [ ] Code refactoring, readme and miscs chores **`11 HRS`**
 
-## TDD
+## Test Driven Development
 
-Starting by developing the structure and the UnitTest
+At the beginning of the project we tried to understand what are the requirements and objectives of the first sprint and how they can be implemented. We built entities and established relationships between them. Then it was decided how they would relate. Based on these data we developed unit tests that initially failed. Then methods were developed and automatic testing was used.
 
-### Method
+## Method
 
-Create the logic and implement it in tests
+### Create the development environment 
+### Diagrams
+### Intellij project
+### Github repository
+### GitKraken management
+### Peer-Programming
+### Research on the selected algorithms
+### Algorithms implementation
+### Database implementation
+### Experiment. Data collection. Analyze
+### Results
 
 ## Velocity
+The division of tasks was done in accordance with the estimated working time for a person (26 hours). At the end of each sprint, considering the ideal hours and those necessary to complete the tasks, the velocity was evaluated individually and for the team.
+At the end of the project, the velocity is evaluated for the whole project. It is used to estimate the impact of peer-programming on individual and team efficiency.
 
 ### First iteration
 
