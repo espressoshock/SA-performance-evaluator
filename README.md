@@ -42,4 +42,22 @@ First draft - _Total 104hrs_.
     - [x]  ~~KIB M#1 Milestone setup~~
     - [x]  ~~Timeline Setup w/ milestones~~
     - [x]  ~~Team members invitation to KIB & Working setup~~ 
- 
+  
+- [x] ![PRM2 05/07/2020](./assets/labels/prm2-label.png) **`104 HRS`**:bookmark:
+  - [x] Project setup **`7 HRS`**
+    - [x] ~~Project boilerplate~~
+    - [x] ~~Dependency management~~
+    - [x] ~~JUnit integration~~
+    - [x] ~~Maven integration~~
+  - [x] Algorithm implementation (Min.1) **`13 HRS`**
+    - [x] ~~Quick Sort~~
+    - [x] ~~Merge Sort~~
+    - [ ] Shell Sort
+    - [ ] Heap Sort
+  - [x] ~~Unit testing~~ **`23 HRS`**
+  - [x] ~~Database Mocks~~ **`15 HRS`**
+  - [x] ~~Meeting planning & TO DO definition~~ **`16 HRS`**
+  - [x] ~~Preparation for (each) release~~ **`16 HRS`**
+  - [x] ~~Run testing and assure working deployable version~~ **`3 HRS`**
+  - [x] ~~Code refactoring, Git revisioning, readme and miscs chores~~ **`11 HRS`**
+
