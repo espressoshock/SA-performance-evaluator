@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/mergeSort/mergeSortRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/methods/RunSortingAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/methods/RunSortingAlgorithms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/workloads/IntWorkload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/workloads/IntWorkload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/heapSort/HeapSortRecursiveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursiveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFPTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/shellSort/ShellSortRecursiveTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +38,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -70,12 +66,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="se.hkr.grp02.da216b.algorithms.mergeSort" />
+      <recent name="se.hkr.grp02.da216b.algorithms.heapSort" />
+      <recent name="se.hkr.grp02.da216b.algorithms.shellSort" />
+      <recent name="se.hkr.grp02.da216b.algorithms.quickSort" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="se.hkr.grp02.da216b.workloads" />
       <recent name="se.hkr.grp02.da216b.utilities" />
@@ -83,8 +87,11 @@
       <recent name="se.hkr.grp02.da216b.algorithms" />
       <recent name="se.hkr.grp02.da216b" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ShellSortRecursiveTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.Main" />
       <module name="SA-performance-evaluator" />
@@ -111,25 +118,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in sa-performance-evaluator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sa-performance-evaluator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="HeapSortRecursiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SA-performance-evaluator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.heapSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.hkr.grp02.da216b.algorithms.heapSort" />
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursiveTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickSortRecursiveFPTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SA-performance-evaluator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.quickSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.hkr.grp02.da216b.algorithms.quickSort" />
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFPTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShellSortRecursiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SA-performance-evaluator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.shellSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.hkr.grp02.da216b.algorithms.shellSort" />
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.shellSort.ShellSortRecursiveTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in sa-performance-evaluator" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.MergeSortRecursive" />
+      <item itemvalue="JUnit.HeapSortRecursiveTest" />
+      <item itemvalue="JUnit.QuickSortRecursiveFPTest" />
+      <item itemvalue="JUnit.ShellSortRecursiveTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShellSortRecursiveTest" />
+        <item itemvalue="JUnit.QuickSortRecursiveFPTest" />
+        <item itemvalue="JUnit.HeapSortRecursiveTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MergeSortRecursive" />
-        <item itemvalue="JUnit.All in sa-performance-evaluator" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +196,7 @@
       <workItem from="1588740896917" duration="4393000" />
       <workItem from="1588775182864" duration="1384000" />
       <workItem from="1588784214166" duration="15836000" />
+      <workItem from="1588840228639" duration="499000" />
     </task>
     <servers />
   </component>
@@ -222,5 +273,9 @@
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="500" height="456" key="SwitcherDM/35.23.3165.877@35.23.3165.877" timestamp="1588790368771" />
+    <state x="759" y="230" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588840438669">
+      <screen x="35" y="23" width="3165" height="877" />
+    </state>
+    <state x="759" y="230" key="com.intellij.testIntegration.createTest.CreateTestDialog/35.23.3165.877@35.23.3165.877" timestamp="1588840438669" />
   </component>
 </project>
