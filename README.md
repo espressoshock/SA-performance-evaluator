@@ -61,3 +61,21 @@ First draft - _Total 104hrs_.
   - [x] ~~Run testing and assure working deployable version~~ **`3 HRS`**
   - [x] ~~Code refactoring, Git revisioning, readme and miscs chores~~ **`11 HRS`**
 
+- [x] ![PRM3 14/07/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
+  - [ ] Database
+    - [x] ~~DB Design and ER, EER~~
+    - [x] ~~Translation of EER into logical model~~
+    - [x] ~~Database creation (hosting::gearhost)~~
+    - [ ] Java DB Entity Classes - 1:1 table mapping
+    - [ ] Database adapter | Hibernate or MySQL Connector
+  - [ ] Algorithm implementation
+    - [ ] Quick Sort Median-of-three __comparator__
+    - [ ] Shell Sort
+    - [ ] Heap Sort
+  - [ ] Implement possibility to test both, average and worst case scenarios
+  - [ ] Velocity
+  - [ ] Meeting planning & TO DO definition **`16 HRS`**
+  - [ ] Preparation for (each) release **`16 HRS`**
+  - [ ] Run testing and assure working deployable version **`3 HRS`**
+  - [ ] Code refactoring, readme and miscs chores **`11 HRS`**
+
