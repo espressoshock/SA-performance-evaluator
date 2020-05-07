@@ -1,21 +1,23 @@
 package se.hkr.grp02.da216b;
 
+import se.hkr.grp02.da216b.methods.RunSortingAlgorithms;
+
 import java.util.Scanner;
 
 public class Main {
-    private static Scanner scanner;
-    private static Boolean running;
 
     public static void main(String[] args) {
-        Main.running = true;
-
-        while(running){
-            ///////******** IMPORT AND =UNCOMMENT ///////********
-            //new RunSortingAlgorithms().run();
-            ///////******** IMPORT AND =UNCOMMENT ///////********
-            System.out.println("Continue ?\n[1]    YES\n[any key]    NO");
-            int choice = scanner.nextInt();
-            running = choice == 1;
+        Scanner scanner = new Scanner(System.in);
+        int choice = 1;
+        while(choice == 1){
+            new RunSortingAlgorithms().run();
+            System.out.println("Continue ?\n[1]    YES\n[any key]    EXIT!");
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("\u001B[34m" + "Thank you!\nBye Bye!" + "\u001B[0m");
+                choice = 0;
+            }
         }
     }
 }
