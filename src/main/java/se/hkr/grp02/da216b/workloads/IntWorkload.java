@@ -42,6 +42,6 @@ public class IntWorkload {
         for (int i = 0; i < wrapper.length; i++){
             wrapper[i] = workload[i];
         }
-        return null;
+        return wrapper;
     }
 }

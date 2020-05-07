@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/heapSort/HeapSortRecursiveTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursiveTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFPTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/shellSort/ShellSortRecursiveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShellSortRecursiveTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.Main" />
       <module name="SA-performance-evaluator" />
@@ -175,10 +172,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ShellSortRecursiveTest" />
         <item itemvalue="JUnit.QuickSortRecursiveFPTest" />
         <item itemvalue="JUnit.HeapSortRecursiveTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MergeSortRecursive" />
       </list>
     </recent_temporary>
@@ -244,26 +241,26 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1260" y="421" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776211946" />
-    <state width="1509" height="538" key="GridCell.Tab.0.bottom" timestamp="1588800868341">
+    <state width="1509" height="727" key="GridCell.Tab.0.bottom" timestamp="1588851163524">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
-    <state width="1509" height="538" key="GridCell.Tab.0.bottom/35.23.3165.877@35.23.3165.877" timestamp="1588800868341" />
-    <state width="1509" height="538" key="GridCell.Tab.0.center" timestamp="1588800868341">
+    <state width="1509" height="727" key="GridCell.Tab.0.bottom/35.23.3165.877@35.23.3165.877" timestamp="1588851163524" />
+    <state width="1509" height="727" key="GridCell.Tab.0.center" timestamp="1588851163524">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
-    <state width="1509" height="538" key="GridCell.Tab.0.center/35.23.3165.877@35.23.3165.877" timestamp="1588800868341" />
-    <state width="1509" height="538" key="GridCell.Tab.0.left" timestamp="1588800868340">
+    <state width="1509" height="727" key="GridCell.Tab.0.center/35.23.3165.877@35.23.3165.877" timestamp="1588851163524" />
+    <state width="1509" height="727" key="GridCell.Tab.0.left" timestamp="1588851163523">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
-    <state width="1509" height="538" key="GridCell.Tab.0.left/35.23.3165.877@35.23.3165.877" timestamp="1588800868340" />
-    <state width="1509" height="538" key="GridCell.Tab.0.right" timestamp="1588800868341">
+    <state width="1509" height="727" key="GridCell.Tab.0.left/35.23.3165.877@35.23.3165.877" timestamp="1588851163523" />
+    <state width="1509" height="727" key="GridCell.Tab.0.right" timestamp="1588851163524">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
-    <state width="1509" height="538" key="GridCell.Tab.0.right/35.23.3165.877@35.23.3165.877" timestamp="1588800868341" />
+    <state width="1509" height="727" key="GridCell.Tab.0.right/35.23.3165.877@35.23.3165.877" timestamp="1588851163524" />
     <state x="1683" y="63" key="SettingsEditor" timestamp="1588788297980">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
