@@ -5,6 +5,7 @@
 - [Aim and purpose](#aim-and-purpose)
   - [Research questions](#research-questions)
 - [Database](#database)
+- [Tasks](#tasks)
 
 ## Introduction
 
@@ -26,3 +27,19 @@ For the following project a relational database MySQL v5.7 and the following ER 
 ![EER Rev1A](./assets/SAPEvaluatorDB_EER_Model_REV1A.PNG)
 
 
+## Tasks
+
+First draft - _Total 104hrs_.
+- [x] ![PRM1 04/30/2020](./assets/labels/prm1-label.png) **`104 HRS`**:bookmark:
+  - [x]  Create project's structure and working tools (Setup working environment)
+    - [x]  ~~Github Repo Setup~~
+    - [x]  ~~Github Readme~~
+    - [x]  ~~Github License~~
+    - [x]  ~~Github KIB~~
+    - [x]  ~~GitkrakenGlo Github KIB Sync~~
+    - [x]  ~~GitGlow TaskLink & Sync~~
+    - [x]  ~~KIB Tasks & Labels~~
+    - [x]  ~~KIB M#1 Milestone setup~~
+    - [x]  ~~Timeline Setup w/ milestones~~
+    - [x]  ~~Team members invitation to KIB & Working setup~~ 
+ 
