@@ -4,15 +4,15 @@
 - [Introduction](#introduction)
 - [Aim and purpose](#aim-and-purpose)
   - [Research questions](#research-questions)
+- [Database](#database)
 - [Tasks](#tasks)
 - [TDD](#tdd)
-- [Method](#method)
+  - [Method](#method)
 - [Velocity](#velocity)
-  - [First Iteration](#first-iteration)
-  - [Second Iteration](#second-iteration)
-  - [Third Iteration](#third-iteration)
-  - [Presentation](#presentation)
-  - [Project](#project)
+  - [First iteration](#first-iteration)
+  - [Second iteration](#second-iteration)
+  - [Third iteration](#third-iteration)
+
 
 ## Introduction
 
@@ -27,86 +27,101 @@ Currently available algorithms evaluators lack the most important features that 
 2. What commonly used sorting algorithm performs the best at sorting non-primitive datatypes?
 3. Serial Sort versus Parallel Sort – Which one is better and when?
 
+## Database
+
+For the following project a relational database MySQL v5.7 and the following ER and EER have been designed to fullfil the system requirements
+
+![EER Rev1A](./assets/SAPEvaluatorDB_EER_Model_REV1A.PNG)
+
+
 ## Tasks
 
 First draft - _Total 104hrs_.
-- [x]  Create project's structure and working tools (Setup working environment) **{8 HRS}** `#PRM#1 04/30/2020` :bookmark:
-  - [x]  ~~Github Repo Setup~~
-  - [x]  ~~Github Readme~~
-  - [x]  ~~Github License~~
-  - [x]  ~~Github KIB~~
-  - [x]  ~~GitkrakenGlo Github KIB Sync~~
-  - [x]  ~~GitGlow TaskLink & Sync~~
-  - [x]  ~~KIB Tasks & Labels~~
-  - [x]  ~~KIB M#1 Milestone setup~~
-  - [x]  ~~Timeline Setup w/ milestones~~
-  - [x]  ~~Team members invitation to KIB & Working setup~~ 
-- [ ]  Create testing units **{8 HRS}**
-- [ ]  Create mock database's classes **{8 HRS}**
-- [ ]  Sorting algorithm research and implementation in Java **{40 HRS}**
-  - [ ]  RESEARCH (Introduction and RQ definition) 
-  - [ ]  IMPLEMENTATION (Heap, merge, shell, quick)
-- [ ] Meeting planning & TO DO definition **{16 HRS}**
-- [ ] Preparation for (each) release **{16 HRS}**
-- [ ] Run testing and assure working deployable version **{8 HRS}**
+- [x] ![PRM1 04/30/2020](./assets/labels/prm1-label.png) **`104 HRS`**:bookmark:
+  - [x]  Create project's structure and working tools (Setup working environment)
+    - [x]  ~~Github Repo Setup~~
+    - [x]  ~~Github Readme~~
+    - [x]  ~~Github License~~
+    - [x]  ~~Github KIB~~
+    - [x]  ~~GitkrakenGlo Github KIB Sync~~
+    - [x]  ~~GitGlow TaskLink & Sync~~
+    - [x]  ~~KIB Tasks & Labels~~
+    - [x]  ~~KIB M#1 Milestone setup~~
+    - [x]  ~~Timeline Setup w/ milestones~~
+    - [x]  ~~Team members invitation to KIB & Working setup~~ 
+  
+- [x] ![PRM2 05/07/2020](./assets/labels/prm2-label.png) **`104 HRS`**:bookmark:
+  - [x] Project setup **`7 HRS`**
+    - [x] ~~Project boilerplate~~
+    - [x] ~~Dependency management~~
+    - [x] ~~JUnit integration~~
+    - [x] ~~Maven integration~~
+  - [x] Algorithm implementation (Min.1) **`13 HRS`**
+    - [x] ~~Quick Sort~~
+    - [x] ~~Merge Sort~~
+    - [ ] Shell Sort
+    - [ ] Heap Sort
+  - [x] ~~Unit testing~~ **`23 HRS`**
+  - [x] ~~Database Mocks~~ **`15 HRS`**
+  - [x] ~~Meeting planning & TO DO definition~~ **`16 HRS`**
+  - [x] ~~Preparation for (each) release~~ **`16 HRS`**
+  - [x] ~~Run testing and assure working deployable version~~ **`3 HRS`**
+  - [x] ~~Code refactoring, Git revisioning, readme and miscs chores~~ **`11 HRS`**
+
+- [x] ![PRM3 14/07/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
+  - [ ] Database
+    - [x] ~~DB Design and ER, EER~~
+    - [x] ~~Translation of EER into logical model~~
+    - [x] ~~Database creation (hosting::gearhost)~~
+    - [ ] Java DB Entity Classes - 1:1 table mapping
+    - [ ] Database adapter | Hibernate or MySQL Connector
+  - [ ] Algorithm implementation
+    - [ ] Quick Sort Median-of-three __comparator__
+    - [ ] Shell Sort
+    - [ ] Heap Sort
+  - [ ] Implement possibility to test both, average and worst case scenarios
+  - [ ] Velocity
+  - [ ] Meeting planning & TO DO definition **`16 HRS`**
+  - [ ] Preparation for (each) release **`16 HRS`**
+  - [ ] Run testing and assure working deployable version **`3 HRS`**
+  - [ ] Code refactoring, readme and miscs chores **`11 HRS`**
 
 ## TDD
 
 Starting by developing the structure and the UnitTest
 
-### Method 
+### Method
 
-Creat the logic and implemt it in tests
+Create the logic and implement it in tests
 
 ## Velocity
 
-### First Iteration
+### First iteration
 
-Team Member                 Ideal Hours           Real Time            Velocity
+| Team Member           | Ideal Hours   | Real Time  | Velocity |
+| ----------------------| -------------:|-----------:|---------:|
+| Vincenzo Buono        |               |            |          |
+| Nemanja Negovanovic   |               |            |          |
+| Alex Oachesu          |               |            |          |
+| Christopher Schroter  |               |            |          |
+| Team                  |               |            |          |
 
-Vincenzo Buono             |                     |                    |
-Nemanja Negovanovic        |                     |                    |
-Alex Oachesu               |                     |                    |
-Christopher Schroter       |                     |                    |
-Team                       |                     |                    |
+### Second iteration
 
-### Second Iteration
+| Team Member           | Ideal Hours   | Real Time  | Velocity |
+| ----------------------| -------------:|-----------:|---------:|
+| Vincenzo Buono        |               |            |          |
+| Nemanja Negovanovic   |               |            |          |
+| Alex Oachesu          |               |            |          |
+| Christopher Schroter  |               |            |          |
+| Team                  |               |            |          |
 
-Team Member                 Ideal Hours           Real Time            Velocity
+### Third iteration
 
-Vincenzo Buono             |                     |                    |
-Nemanja Negovanovic        |                     |                    |
-Alex Oachesu               |                     |                    |
-Christopher Schroter       |                     |                    |
-Team                       |                     |                    |
-
-### Third Iteration
-
-Team Member                 Ideal Hours           Real Time            Velocity
-
-Vincenzo Buono             |                     |                    |
-Nemanja Negovanovic        |                     |                    |
-Alex Oachesu               |                     |                    |
-Christopher Schroter       |                     |                    |
-Team                       |                     |                    |
-
-### Presentation
-
-Team Member                 Ideal Hours           Real Time            Velocity
-
-Vincenzo Buono             |                     |                    |
-Nemanja Negovanovic        |                     |                    |
-Alex Oachesu               |                     |                    |
-Christopher Schroter       |                     |                    |
-Team                       |                     |                    |
-
-### Project
-
-Team Member                 Ideal Hours           Real Time            Velocity
-
-Vincenzo Buono             |                     |                    |
-Nemanja Negovanovic        |                     |                    |
-Alex Oachesu               |                     |                    |
-Christopher Schroter       |                     |                    |
-Team                       |                     |                    |
-
+| Team Member           | Ideal Hours   | Real Time  | Velocity |
+| ----------------------| -------------:|-----------:|---------:|
+| Vincenzo Buono        |               |            |          |
+| Nemanja Negovanovic   |               |            |          |
+| Alex Oachesu          |               |            |          |
+| Christopher Schroter  |               |            |          |
+| Team                  |               |            |          |
