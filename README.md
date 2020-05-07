@@ -6,6 +6,12 @@
   - [Research questions](#research-questions)
 - [Database](#database)
 - [Tasks](#tasks)
+- [TDD](#tdd)
+  - [Method](#method)
+- [Velocity](#velocity)
+  - [First iteration](#first-iteration)
+  - [Second iteration](#second-iteration)
+  - [Third iteration](#third-iteration)
 
 ## Introduction
 
@@ -79,3 +85,42 @@ First draft - _Total 104hrs_.
   - [ ] Run testing and assure working deployable version **`3 HRS`**
   - [ ] Code refactoring, readme and miscs chores **`11 HRS`**
 
+## TDD
+
+Starting by developing the structure and the UnitTest
+
+### Method
+
+Create the logic and implement it in tests
+
+## Velocity
+
+### First iteration
+
+| Team Member           | Ideal Hours   | Real Time  | Velocity |
+| ----------------------| -------------:|-----------:|---------:|
+| Vincenzo Buono        |               |            |          |
+| Nemanja Negovanovic   |               |            |          |
+| Alex Oachesu          |               |            |          |
+| Christopher Schroter  |               |            |          |
+| Team                  |               |            |          |
+
+### Second iteration
+
+| Team Member           | Ideal Hours   | Real Time  | Velocity |
+| ----------------------| -------------:|-----------:|---------:|
+| Vincenzo Buono        |               |            |          |
+| Nemanja Negovanovic   |               |            |          |
+| Alex Oachesu          |               |            |          |
+| Christopher Schroter  |               |            |          |
+| Team                  |               |            |          |
+
+### Third iteration
+
+| Team Member           | Ideal Hours   | Real Time  | Velocity |
+| ----------------------| -------------:|-----------:|---------:|
+| Vincenzo Buono        |               |            |          |
+| Nemanja Negovanovic   |               |            |          |
+| Alex Oachesu          |               |            |          |
+| Christopher Schroter  |               |            |          |
+| Team                  |               |            |          |
