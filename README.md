@@ -112,9 +112,9 @@ Create the logic and implement it in tests
 | ----------------------| -------------:|-----------:|------------:|
 | Vincenzo Buono        |            26 |         37 |        0.70 |
 | Nemanja Negovanovic   |            26 |         26 |        1.00 |
-| Alex Oachesu          |            26 |         28 |        0.93 |
+| Alex Oachesu          |            26 |         32 |        0.81 |
 | Christopher Schroter  |            26 |         28 |        0.93 |
-| **Team**              |       **104** |    **119** | **0.89avg** |
+| **Team**              |       **104** |    **119** | **0.85avg** |
 
 ### Third iteration
 
