@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursive;
 import se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive;
 import se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP;
-import se.hkr.grp02.da216b.algorithms.shellSort.ShellSortRecursive;
+import se.hkr.grp02.da216b.algorithms.shellSort.ShellSort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AlgorithmsTest {
-    Algorithms algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new QuickSortRecursiveFP(), new ShellSortRecursive());
+    Algorithms algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new QuickSortRecursiveFP(), new ShellSort());
 
     @Test
     void getHeapSort() {
@@ -32,6 +32,6 @@ class AlgorithmsTest {
     @Test
     void getShellSort() {
         System.out.println("Get ShellSort");
-        assertTrue(algorithms.getShellSort() instanceof ShellSortRecursive);
+        assertTrue(algorithms.getShellSort() instanceof ShellSort);
     }
 }

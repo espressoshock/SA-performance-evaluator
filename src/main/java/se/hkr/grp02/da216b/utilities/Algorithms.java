@@ -4,13 +4,13 @@ package se.hkr.grp02.da216b.utilities;
 import se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursive;
 import se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive;
 import se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP;
-import se.hkr.grp02.da216b.algorithms.shellSort.ShellSortRecursive;
+import se.hkr.grp02.da216b.algorithms.shellSort.ShellSort;
 
 public class Algorithms {
     private HeapSortRecursive heapSort;
     private MergeSortRecursive mergeSort;
     private QuickSortRecursiveFP quickSort;
-    private ShellSortRecursive shellSort;
+    private ShellSort shellSort;
 
     //combinations of 1
     public Algorithms(HeapSortRecursive heapSort) {
@@ -24,7 +24,7 @@ public class Algorithms {
     public Algorithms(QuickSortRecursiveFP quickSort) {
         this.quickSort = quickSort;
     }
-    public Algorithms(ShellSortRecursive shellSort) {
+    public Algorithms(ShellSort shellSort) {
         this.shellSort = shellSort;
     }
 
@@ -38,7 +38,7 @@ public class Algorithms {
         this.heapSort = heapSort;
         this.quickSort = quickSort;
     }
-    public Algorithms(HeapSortRecursive heapSort, ShellSortRecursive shellSort) {
+    public Algorithms(HeapSortRecursive heapSort, ShellSort shellSort) {
         this.heapSort = heapSort;
         this.shellSort = shellSort;
     }
@@ -47,12 +47,12 @@ public class Algorithms {
         this.mergeSort = mergeSort;
         this.quickSort = quickSort;
     }
-    public Algorithms(MergeSortRecursive mergeSort, ShellSortRecursive shellSort) {
+    public Algorithms(MergeSortRecursive mergeSort, ShellSort shellSort) {
         this.mergeSort = mergeSort;
         this.shellSort = shellSort;
     }
     //                   QuickSort
-    public Algorithms(QuickSortRecursiveFP quickSort, ShellSortRecursive shellSort) {
+    public Algorithms(QuickSortRecursiveFP quickSort, ShellSort shellSort) {
         this.quickSort = quickSort;
         this.shellSort = shellSort;
     }
@@ -64,25 +64,25 @@ public class Algorithms {
         this.mergeSort = mergeSort;
         this.quickSort = quickSort;
     }
-    public Algorithms(HeapSortRecursive heapSort, MergeSortRecursive mergeSort, ShellSortRecursive shellSort) {
+    public Algorithms(HeapSortRecursive heapSort, MergeSortRecursive mergeSort, ShellSort shellSort) {
         this.heapSort = heapSort;
         this.mergeSort = mergeSort;
         this.shellSort = shellSort;
     }
-    public Algorithms(HeapSortRecursive heapSort, QuickSortRecursiveFP quickSort, ShellSortRecursive shellSort) {
+    public Algorithms(HeapSortRecursive heapSort, QuickSortRecursiveFP quickSort, ShellSort shellSort) {
         this.heapSort = heapSort;
         this.quickSort = quickSort;
         this.shellSort = shellSort;
     }
     //                   MergeSort
-    public Algorithms(MergeSortRecursive mergeSort, QuickSortRecursiveFP quickSort, ShellSortRecursive shellSort) {
+    public Algorithms(MergeSortRecursive mergeSort, QuickSortRecursiveFP quickSort, ShellSort shellSort) {
         this.mergeSort = mergeSort;
         this.quickSort = quickSort;
         this.shellSort = shellSort;
     }
 
     //combinations of 4
-    public Algorithms(HeapSortRecursive heapSort, MergeSortRecursive mergeSort, QuickSortRecursiveFP quickSort, ShellSortRecursive shellSort) {
+    public Algorithms(HeapSortRecursive heapSort, MergeSortRecursive mergeSort, QuickSortRecursiveFP quickSort, ShellSort shellSort) {
         this.heapSort = heapSort;
         this.mergeSort = mergeSort;
         this.quickSort = quickSort;
@@ -101,7 +101,7 @@ public class Algorithms {
         return quickSort;
     }
 
-    public ShellSortRecursive getShellSort() {
+    public ShellSort getShellSort() {
         return shellSort;
     }
 }
