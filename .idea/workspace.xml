@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="" />
+    <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="Quick Sort recursive implementation &#10;Refactoring algorithms, test units, main, and run.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/heapSort/HeapSortRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/heapSort/HeapSortRecursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/shellSort/ShellSortRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/shellSort/ShellSortRecursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/methods/RunSortingAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/methods/RunSortingAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/heapSort/HeapSortRecursiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/heapSort/HeapSortRecursiveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursiveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFPTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFPTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/shellSort/ShellSortRecursiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/hkr/grp02/da216b/algorithms/shellSort/ShellSortRecursiveTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +98,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in SA-performance-evaluator">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.Main" />
       <module name="SA-performance-evaluator" />
@@ -100,24 +112,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in SA-performance-evaluator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MergeSortRecursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive" />
       <module name="SA-performance-evaluator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.mergeSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapSortRecursiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuickSortRecursiveFP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP" />
       <module name="SA-performance-evaluator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.heapSort.*" />
+          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.quickSort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="se.hkr.grp02.da216b.algorithms.heapSort" />
-      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursiveTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortRecursiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SA-performance-evaluator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.mergeSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.hkr.grp02.da216b.algorithms.mergeSort" />
+      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursiveTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,16 +170,7 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShellSortRecursiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SA-performance-evaluator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="se.hkr.grp02.da216b.algorithms.shellSort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="se.hkr.grp02.da216b.algorithms.shellSort" />
-      <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.algorithms.shellSort.ShellSortRecursiveTest" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,18 +179,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.HeapSortRecursiveTest" />
+      <item itemvalue="Application.QuickSortRecursiveFP" />
+      <item itemvalue="Application.MergeSortRecursive" />
       <item itemvalue="JUnit.QuickSortRecursiveFPTest" />
-      <item itemvalue="JUnit.ShellSortRecursiveTest" />
-      <item itemvalue="JUnit.All in SA-performance-evaluator" />
+      <item itemvalue="JUnit.MergeSortRecursiveTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in SA-performance-evaluator" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ShellSortRecursiveTest" />
+        <item itemvalue="JUnit.MergeSortRecursiveTest" />
         <item itemvalue="JUnit.QuickSortRecursiveFPTest" />
-        <item itemvalue="JUnit.HeapSortRecursiveTest" />
+        <item itemvalue="Application.QuickSortRecursiveFP" />
+        <item itemvalue="Application.MergeSortRecursive" />
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +208,7 @@
       <workItem from="1588775182864" duration="1384000" />
       <workItem from="1588784214166" duration="15836000" />
       <workItem from="1588840228639" duration="499000" />
+      <workItem from="1589029018352" duration="14306000" />
     </task>
     <task id="LOCAL-00001" summary="bug fixed for merge integer sort">
       <created>1588851473048</created>
@@ -246,30 +268,30 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1260" y="421" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776211946" />
-    <state x="1363" y="55" key="CommitChangelistDialog2" timestamp="1588851472892">
+    <state x="1363" y="55" key="CommitChangelistDialog2" timestamp="1589042137188">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
-    <state x="1363" y="55" key="CommitChangelistDialog2/35.23.3165.877@35.23.3165.877" timestamp="1588851472892" />
-    <state width="1509" height="139" key="GridCell.Tab.0.bottom" timestamp="1588851431836">
+    <state x="1363" y="55" key="CommitChangelistDialog2/35.23.3165.877@35.23.3165.877" timestamp="1589042137188" />
+    <state width="1350" height="727" key="GridCell.Tab.0.bottom" timestamp="1589042672605">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
-    <state width="1509" height="139" key="GridCell.Tab.0.bottom/35.23.3165.877@35.23.3165.877" timestamp="1588851431836" />
-    <state width="1509" height="139" key="GridCell.Tab.0.center" timestamp="1588851431836">
+    <state width="1350" height="727" key="GridCell.Tab.0.bottom/35.23.3165.877@35.23.3165.877" timestamp="1589042672605" />
+    <state width="1350" height="727" key="GridCell.Tab.0.center" timestamp="1589042672604">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
-    <state width="1509" height="139" key="GridCell.Tab.0.center/35.23.3165.877@35.23.3165.877" timestamp="1588851431836" />
-    <state width="1509" height="139" key="GridCell.Tab.0.left" timestamp="1588851431835">
+    <state width="1350" height="727" key="GridCell.Tab.0.center/35.23.3165.877@35.23.3165.877" timestamp="1589042672604" />
+    <state width="1350" height="727" key="GridCell.Tab.0.left" timestamp="1589042672603">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
-    <state width="1509" height="139" key="GridCell.Tab.0.left/35.23.3165.877@35.23.3165.877" timestamp="1588851431835" />
-    <state width="1509" height="139" key="GridCell.Tab.0.right" timestamp="1588851431836">
+    <state width="1350" height="727" key="GridCell.Tab.0.left/35.23.3165.877@35.23.3165.877" timestamp="1589042672603" />
+    <state width="1350" height="727" key="GridCell.Tab.0.right" timestamp="1589042672605">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
-    <state width="1509" height="139" key="GridCell.Tab.0.right/35.23.3165.877@35.23.3165.877" timestamp="1588851431836" />
+    <state width="1350" height="727" key="GridCell.Tab.0.right/35.23.3165.877@35.23.3165.877" timestamp="1589042672605" />
     <state x="1683" y="63" key="SettingsEditor" timestamp="1588788297980">
       <screen x="35" y="23" width="3165" height="877" />
     </state>

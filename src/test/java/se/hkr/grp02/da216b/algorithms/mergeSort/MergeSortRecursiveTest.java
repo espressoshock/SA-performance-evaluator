@@ -17,8 +17,8 @@ class MergeSortRecursiveTest {
         System.out.println("Sort :");
         Arrays.sort(testInt);
         Arrays.sort(testString);
-        assertEquals(testInt, mergeSortRecursive.sort(testInt));
-        assertEquals(testString, mergeSortRecursive.sort(testString));
+        assertEquals(Arrays.toString(testInt), Arrays.toString(mergeSortRecursive.sort(testInt)));
+        assertEquals(Arrays.toString(testString), Arrays.toString(mergeSortRecursive.sort(testString)));
     }
 
     @Test

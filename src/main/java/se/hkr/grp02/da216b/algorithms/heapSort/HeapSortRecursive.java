@@ -2,7 +2,6 @@ package se.hkr.grp02.da216b.algorithms.heapSort;
 
 public class HeapSortRecursive {
     ///////******** =IMPORTED ///////********
-    private final static String NAME = "heap"; //-> updated to static
     public int[] sort(int[] workload) {
         return workload;
     }
@@ -10,7 +9,7 @@ public class HeapSortRecursive {
         return workload;
     }
     public String getNAME() {
-        return NAME;
+        return "heap";
     }
     ///////******** =IMPORTED ///////********
 }
