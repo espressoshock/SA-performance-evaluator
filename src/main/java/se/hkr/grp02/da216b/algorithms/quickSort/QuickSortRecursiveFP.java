@@ -67,7 +67,7 @@ public class QuickSortRecursiveFP {
             // recursive call for the right partition
             quickSort(array, pivotIndex + 1, to);
         }
-        // else the collection is already sorted
+        // else, the collection is already sorted
     }
 
     /**

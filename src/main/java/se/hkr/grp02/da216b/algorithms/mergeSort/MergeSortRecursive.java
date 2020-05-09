@@ -43,12 +43,8 @@ public class MergeSortRecursive {
         int rightLength = to - median;
 
         // Create halves Left ( leftSide ) & Right ( rightSide )
-        E[] leftSide = Arrays.copyOfRange(workload, 0, leftLength);
-        E[] rightSide = Arrays.copyOfRange(workload, median + 1, median + 1 +rightLength);
-
-        // Split workload in halves
-        System.arraycopy(workload, from ,leftSide, 0, leftLength);
-        System.arraycopy(workload, median + 1, rightSide, 0, rightLength);
+        E[] leftSide = Arrays.copyOfRange(workload, from, from + leftLength);
+        E[] rightSide = Arrays.copyOfRange(workload, median + 1, median + 1 + rightLength);
 
         // merge back the two halves, sorting them
        mergeHalves(workload, leftSide, rightSide,from);
