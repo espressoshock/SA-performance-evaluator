@@ -18,8 +18,8 @@ class ShellSortRecursiveTest {
         System.out.println("Sort :");
         Arrays.sort(testInt);
         Arrays.sort(testString);
-        assertEquals(Arrays.toString(testInt), Arrays.toString(shellSortRecursive.sort(testInt)));
-        assertEquals(Arrays.toString(testString), Arrays.toString(shellSortRecursive.sort(testString)));
+        assertEquals(Arrays.toString(testInt), Arrays.toString(shellSortRecursive.sort(testIntB)));
+        assertEquals(Arrays.toString(testString), Arrays.toString(shellSortRecursive.sort(testStringB)));
     }
 
     @Test
