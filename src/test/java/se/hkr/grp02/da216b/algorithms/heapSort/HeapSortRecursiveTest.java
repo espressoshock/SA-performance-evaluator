@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class HeapSortRecursiveTest {
 
     HeapSortRecursive heapSortRecursive = new HeapSortRecursive();
-    int[] testInt = {5,4,3,2,1};
-    int[] testIntB = {5,4,3,2,1};
+    Integer[] testInt = {5,4,3,2,1};
+    Integer[] testIntB = {5,4,3,2,1};
     String[] testStringB = {"5","4","3","2","1"};
     String[] testString = {"5","4","3","2","1"};
 
@@ -21,6 +21,7 @@ class HeapSortRecursiveTest {
         System.out.println("Sort :");
         Arrays.sort(testInt);
         Arrays.sort(testString);
+
         assertEquals(testInt, heapSortRecursive.sort(testIntB));
         assertEquals(testString, heapSortRecursive.sort(testStringB));
     }

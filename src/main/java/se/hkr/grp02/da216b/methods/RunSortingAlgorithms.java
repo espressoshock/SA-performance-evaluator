@@ -140,7 +140,7 @@ public class RunSortingAlgorithms {
         if (algorithms.getHeapSort() != null) {
             if (workload.getIntWorkload() != null) {
                 timer.startTimer();
-                algorithms.getHeapSort().sort(workload.getIntWorkload().getWorkload());
+                //algorithms.getHeapSort().sort(workload.getIntWorkload().getWorkload());
                 timer.stopTimer();
                 results.add(new Result(timer.getTime(), algorithms.getHeapSort().getNAME(), workload));
             } else if (workload.getStringWorkload() != null) {
