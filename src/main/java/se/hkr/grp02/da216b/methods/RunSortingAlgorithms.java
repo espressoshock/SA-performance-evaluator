@@ -3,7 +3,7 @@ package se.hkr.grp02.da216b.methods;
 import se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursive;
 import se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive;
 import se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP;
-import se.hkr.grp02.da216b.algorithms.shellSort.ShellSortRecursive;
+import se.hkr.grp02.da216b.algorithms.shellSort.ShellSort;
 import se.hkr.grp02.da216b.utilities.Algorithms;
 import se.hkr.grp02.da216b.utilities.Result;
 import se.hkr.grp02.da216b.utilities.Timer;
@@ -83,10 +83,23 @@ public class RunSortingAlgorithms {
 
         for (Result r : results) {
             switch (r.getAlgorithmName()) {
-                case "heap" -> heapResults.add(r.getTime());
-                case "merge" -> mergeResults.add(r.getTime());
-                case "quick" -> quickResults.add(r.getTime());
-                case "shell" -> shellResults.add(r.getTime());
+                //////// Could not run on my PC, I do not have level 14 for project (Nemanja)
+//                case "heap" -> heapResults.add(r.getTime());
+//                case "merge" -> mergeResults.add(r.getTime());
+//                case "quick" -> quickResults.add(r.getTime());
+//                case "shell" -> shellResults.add(r.getTime());
+                case "heap":
+                    heapResults.add(r.getTime());
+                    break;
+                case "merge":
+                    mergeResults.add(r.getTime());
+                    break;
+                case "quick":
+                    quickResults.add(r.getTime());
+                    break;
+                case "shell":
+                    shellResults.add(r.getTime());
+                    break;
             }
         }
     }
@@ -166,7 +179,7 @@ public class RunSortingAlgorithms {
         if (algorithms.getShellSort() != null) {
             if (workload.getIntWorkload() != null) {
                 timer.startTimer();
-                algorithms.getShellSort().sort(workload.getIntWorkload().getWorkload());
+                //algorithms.getShellSort().sort(workload.getIntWorkload().getWorkload());
                 timer.stopTimer();
                 results.add(new Result(timer.getTime(), algorithms.getShellSort().getNAME(), workload));
             } else if (workload.getStringWorkload() != null) {
@@ -321,7 +334,7 @@ public class RunSortingAlgorithms {
                 this.algorithms = new Algorithms(new QuickSortRecursiveFP());
                 break;
             case 4:
-                this.algorithms = new Algorithms(new ShellSortRecursive());
+                this.algorithms = new Algorithms(new ShellSort());
                 break;
             case 5:
                 this.algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive());
@@ -330,31 +343,31 @@ public class RunSortingAlgorithms {
                 this.algorithms = new Algorithms(new HeapSortRecursive(), new QuickSortRecursiveFP());
                 break;
             case 7:
-                this.algorithms = new Algorithms(new HeapSortRecursive(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new HeapSortRecursive(), new ShellSort());
                 break;
             case 8:
                 this.algorithms = new Algorithms(new MergeSortRecursive(), new QuickSortRecursiveFP());
                 break;
             case 9:
-                this.algorithms = new Algorithms(new MergeSortRecursive(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new MergeSortRecursive(), new ShellSort());
                 break;
             case 10:
-                this.algorithms = new Algorithms(new QuickSortRecursiveFP(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new QuickSortRecursiveFP(), new ShellSort());
                 break;
             case 11:
                 this.algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new QuickSortRecursiveFP());
                 break;
             case 12:
-                this.algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new ShellSort());
                 break;
             case 13:
-                this.algorithms = new Algorithms(new HeapSortRecursive(), new QuickSortRecursiveFP(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new HeapSortRecursive(), new QuickSortRecursiveFP(), new ShellSort());
                 break;
             case 14:
-                this.algorithms = new Algorithms(new MergeSortRecursive(), new QuickSortRecursiveFP(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new MergeSortRecursive(), new QuickSortRecursiveFP(), new ShellSort());
                 break;
             case 15:
-                this.algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new QuickSortRecursiveFP(), new ShellSortRecursive());
+                this.algorithms = new Algorithms(new HeapSortRecursive(), new MergeSortRecursive(), new QuickSortRecursiveFP(), new ShellSort());
                 break;
             default:
                 break;
