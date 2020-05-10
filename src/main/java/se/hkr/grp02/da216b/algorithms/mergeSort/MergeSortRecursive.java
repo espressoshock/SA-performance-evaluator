@@ -7,8 +7,6 @@ import java.util.Arrays;
  */
 public class MergeSortRecursive {
 
-    private final String NAME = "merge";
-
     /**
      * Takes a collection that implements Comparable
      * and sorts it by calling the recursive Merge sort
@@ -46,7 +44,7 @@ public class MergeSortRecursive {
 
         // Create halves Left ( leftSide ) & Right ( rightSide )
         E[] leftSide = Arrays.copyOfRange(workload, 0, leftLength);
-        E[] rightSide = Arrays.copyOfRange(workload, 0, rightLength);
+        E[] rightSide = Arrays.copyOfRange(workload, median + 1, median + 1 +rightLength);
 
         // Split workload in halves
         System.arraycopy(workload, from ,leftSide, 0, leftLength);
@@ -68,7 +66,6 @@ public class MergeSortRecursive {
         // Compare&merge elements of the two halves
         // indexes for halves
         int i = 0, j = 0;
-
         // Initial index of merged sub array
         int k = from;
         while (i < left.length && j < right.length) {
@@ -146,6 +143,17 @@ public class MergeSortRecursive {
      * @return string value
      */
     public String getNAME() {
-        return NAME;
+        return "merge";
     }
+
+
+    public static void main(String[] args) {
+        Integer[] arr = {9, 8, 7, 6,7,4,2,9,0,1, 5, 4, 3, 2, 1, 0};
+        MergeSortRecursive m = new MergeSortRecursive();
+        m.sort(arr);
+        for (int x : arr){
+            System.out.println(x);
+        }
+    }
+
 }

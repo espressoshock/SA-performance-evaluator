@@ -1,6 +1,5 @@
 package se.hkr.grp02.da216b.methods;
 
-
 import se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursive;
 import se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive;
 import se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP;
@@ -40,15 +39,12 @@ public class RunSortingAlgorithms {
     /**
      * Returns the average value of the results
      *
-     * @param algorithm
-     * @return
+     * @param algorithm running results
+     * @return the average value
      */
     public long getAverage(ArrayList<Long> algorithm) {
-        long average = 0;
-        for (Long l : algorithm) {
-            average = average + l;
-        }
-        return average / algorithm.size();
+        double average = algorithm.stream().mapToLong(val -> val).average().orElse(0);
+        return (new Double(average)).longValue();
     }
 
     /**
@@ -77,28 +73,20 @@ public class RunSortingAlgorithms {
     /**
      * Sort the results based on the type of the algorithm being used
      *
-     * @param heapResults
-     * @param mergeResults
-     * @param quickResults
-     * @param shellResults
+     * @param heapResults  input
+     * @param mergeResults input
+     * @param quickResults input
+     * @param shellResults input
      */
     public void groupResults(ArrayList<Long> heapResults, ArrayList<Long> mergeResults,
                              ArrayList<Long> quickResults, ArrayList<Long> shellResults) {
 
         for (Result r : results) {
             switch (r.getAlgorithmName()) {
-                case "heap":
-                    heapResults.add(r.getTime());
-                    break;
-                case "merge":
-                    mergeResults.add(r.getTime());
-                    break;
-                case "quick":
-                    quickResults.add(r.getTime());
-                    break;
-                case "shell":
-                    shellResults.add(r.getTime());
-                    break;
+                case "heap" -> heapResults.add(r.getTime());
+                case "merge" -> mergeResults.add(r.getTime());
+                case "quick" -> quickResults.add(r.getTime());
+                case "shell" -> shellResults.add(r.getTime());
             }
         }
     }
@@ -129,6 +117,7 @@ public class RunSortingAlgorithms {
             runAlgorithms();
             choice--;
         }
+        System.out.println("Sorting ... ");
     }
 
     /**
@@ -164,7 +153,7 @@ public class RunSortingAlgorithms {
         if (algorithms.getQuickSort() != null) {
             if (workload.getIntWorkload() != null) {
                 timer.startTimer();
-                algorithms.getQuickSort().sort(workload.getIntWorkload().getWorkload());
+                algorithms.getQuickSort().sort(workload.getIntWorkload().getIntegerWorkload());
                 timer.stopTimer();
                 results.add(new Result(timer.getTime(), algorithms.getQuickSort().getNAME(), workload));
             } else if (workload.getStringWorkload() != null) {
@@ -194,10 +183,9 @@ public class RunSortingAlgorithms {
      */
     public void chooseWorkload() {
         boolean integer;
-        int two = 2;
-        int three = 3;
+        int[] upLimit = {2, 2, 1000000};
         int[] choices = new int[3];
-        String[] prompts = {"Select: \n[1]    Average case\n[2]    Worst Case\n[3]    Both",
+        String[] prompts = {"Select: \n[1]    Average case\n[2]    Worst Case",
                 "Select: \n[1]    Integer\n[2]    String\n",
                 "Select a number between 10 and 1.000.000 \nas the size of your workload ",
                 "\u001B[34m" + "Valid input" + "\u001B[0m",
@@ -208,16 +196,11 @@ public class RunSortingAlgorithms {
                try {
                    integer = false;
                    choices[i] = Integer.parseInt(scanner.nextLine());
-                   if (choices[i] < 1 || choices[i] > three) {
+                   if (choices[i] < 1 || choices[i] > upLimit[i]) {
                        System.out.println(prompts[4]);
                        integer = true;
                    }else{
-                       if (three == two){
-                           three = 1000000;
-                       }else{
-                           three = two;
-                           System.out.println(prompts[3]);
-                       }
+                       System.out.println(prompts[3]);
                    }
                } catch (NumberFormatException e) {
                    System.out.println(prompts[4]);
@@ -225,6 +208,7 @@ public class RunSortingAlgorithms {
                }
            } while (integer);
        }
+        System.out.println("Creating the workload ...");
         createWorkload(choices[0], choices[1], choices[2]);
     }
 
