@@ -7,10 +7,10 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShellSortTest {
-    ShellSort shellSortRecursive = new ShellSort();
-    int[] testInt = {5,4,3,2,1};
+    ShellSort shellSort = new ShellSort();
+    Integer[] testInt = {5,4,3,2,1};
     String[] testString = {"5","4","3","2","1"};
-    int[] testIntB = {5,4,3,2,1};
+    Integer[] testIntB = {5,4,3,2,1};
     String[] testStringB = {"5","4","3","2","1"};
 
     @Test
@@ -19,13 +19,13 @@ class ShellSortTest {
         Arrays.sort(testInt);
         Arrays.sort(testString);
 
-        assertEquals(Arrays.toString(testInt), Arrays.toString(shellSortRecursive.sort(testIntB)));
-        assertEquals(Arrays.toString(testString), Arrays.toString(shellSortRecursive.sort(testStringB)));
+        assertEquals(Arrays.toString(testInt), Arrays.toString(shellSort.sort(testIntB)));
+        assertEquals(Arrays.toString(testString), Arrays.toString(shellSort.sort(testStringB)));
     }
 
     @Test
     void getNAME() {
         System.out.println("Get Name :");
-        assertEquals("shell", shellSortRecursive.getNAME());
+        assertEquals("shell", shellSort.getNAME());
     }
 }

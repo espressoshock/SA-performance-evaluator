@@ -83,10 +83,23 @@ public class RunSortingAlgorithms {
 
         for (Result r : results) {
             switch (r.getAlgorithmName()) {
-                case "heap" -> heapResults.add(r.getTime());
-                case "merge" -> mergeResults.add(r.getTime());
-                case "quick" -> quickResults.add(r.getTime());
-                case "shell" -> shellResults.add(r.getTime());
+                //////// Could not run on my PC, I do not have level 14 for project (Nemanja)
+//                case "heap" -> heapResults.add(r.getTime());
+//                case "merge" -> mergeResults.add(r.getTime());
+//                case "quick" -> quickResults.add(r.getTime());
+//                case "shell" -> shellResults.add(r.getTime());
+                case "heap":
+                    heapResults.add(r.getTime());
+                    break;
+                case "merge":
+                    mergeResults.add(r.getTime());
+                    break;
+                case "quick":
+                    quickResults.add(r.getTime());
+                    break;
+                case "shell":
+                    shellResults.add(r.getTime());
+                    break;
             }
         }
     }
