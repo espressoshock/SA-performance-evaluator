@@ -1,8 +1,5 @@
 package se.hkr.grp02.da216b.algorithms.heapSort;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.EventObject;
 
 /**
  * https://big-o.io/examples/heapsort/java-generic/
@@ -21,9 +18,8 @@ public class HeapSortRecursive<E extends Comparable<? super E>> {
 //    public String[] sort(String[] workload) {
 //        return workload;
 //    }
-
     public String getNAME() {
-        return NAME;
+        return "heap";
     }
     ///////******** =IMPORTED ///////********
     public E[] sort(E[] array)
