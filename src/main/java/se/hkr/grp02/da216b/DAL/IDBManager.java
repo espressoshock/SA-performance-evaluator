@@ -147,6 +147,30 @@ public interface IDBManager {
         }
         return ECAlgorithms;
     }
+    public static List<ECAlgorithm> getAllAlgorithmsWithWorstCase(String algorithmWorstCase) {
+        Connection connection = IDBManager.getConnection();
+        List<ECAlgorithm>ECAlgorithms = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM algorithms WHERE complexity_worstCase=?");
+            ps.setString(1, algorithmWorstCase);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next())
+                ECAlgorithms.add(new ECAlgorithm(
+                        resultSet.getString("name"),
+                        ECAlgorithmType.valueOf(resultSet.getString("type")),
+                        resultSet.getString("complexity_bestCase"),
+                        resultSet.getString("complexity_averageCase"),
+                        resultSet.getString("complexity_worstCase"),
+                        resultSet.getBoolean("stability")));
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECAlgorithms;
+    }
 
     /******************* ALGORITHM *******************/
 
