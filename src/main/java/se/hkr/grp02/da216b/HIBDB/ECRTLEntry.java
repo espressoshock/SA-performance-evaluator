@@ -28,6 +28,13 @@ public class ECRTLEntry {
     @Column(name = "workload")
     String workload;
 
+    public ECRTLEntry(String rtrResult, String targetlang, String targetOS, String workload) {
+        this.rtrResult = rtrResult;
+        this.targetlang = targetlang;
+        this.targetOS = targetOS;
+        this.workload = workload;
+    }
+
     public ECRTLEntry(int id, Timestamp timestamp, String rtrResult, String targetlang, String targetOS, String workload) {
         this.id = id;
         this.timestamp = timestamp;
