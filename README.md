@@ -133,24 +133,23 @@ At the beginning of the project the requirements and objectives of the first spr
 ### Research on the selected algorithms
 #### Sorting Algorithms
 **Array Sorting Algorithms**
-_____________________________________________________________________________
-|       Algorithm       |        Time Complexity         | Space Complexity |
-|                       |   Best   |  Average  |  Worst  |       Worst      |
-| ----------------------| --------:|----------:|--------:|-----------------:|
-| Quicksort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |O(log(n))         |
-| Mergesort             |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |O(n)              |
-| Timsort               |Ω(n)      |Θ(nlog(n)) |O(nlogn) |O(n)              |
-| Heapsort              |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |O(1)              |
-| Bubble Sort           |Ω(n)      |Θ(n^2)     |O(n^2)   |O(1)              |
-| Insertion Sort        |Ω(n)      |Θ(n^2)     |O(n^2)   |O(1)              |
-| Selection Sort        |Ω(n^2)    |Θ(n^2)     |O(n^2)   |O(1)              |
-| Tree Sort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |O(n)              |
-| Shell Sort            |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |O(1)              |
-| Bucket Sort           |Ω(n + k)  |Θ(n + k )  |O(n^2)   |O(n)              |
-| Radix Sort            |Ω(nk)     |Θ(nk)      |O(nk)    |O(n + k)          |
-| Counting Sort         |Ω(n + k)  |Θ(n + k )  |O(n + k) |O(k)              |
-| Cubesort              |Ω(n)      |Θ(nlog(n)) |O(nlogn) |O(n)              |
-_____________________________________________________________________________
+|    **Algorithm **     |      **Time Complexity**       |**Space Complexity**|
+|-----------------------|---------:|----------:|--------:|-------------------:|
+|                       |   Best   |  Average  |  Worst  |       Worst        |
+| ----------------------| --------:|----------:|--------:|-------------------:|
+| Quicksort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |    O(log(n))       |
+| Mergesort             |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |    O(n)            |
+| Timsort               |Ω(n)      |Θ(nlog(n)) |O(nlogn) |    O(n)            |
+| Heapsort              |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |    O(1)            |
+| Bubble Sort           |Ω(n)      |Θ(n^2)     |O(n^2)   |    O(1)            |
+| Insertion Sort        |Ω(n)      |Θ(n^2)     |O(n^2)   |    O(1)            |
+| Selection Sort        |Ω(n^2)    |Θ(n^2)     |O(n^2)   |    O(1)            |
+| Tree Sort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |    O(n)            |
+| Shell Sort            |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |    O(1)            |
+| Bucket Sort           |Ω(n + k)  |Θ(n + k )  |O(n^2)   |    O(n)            |
+| Radix Sort            |Ω(nk)     |Θ(nk)      |O(nk)    |    O(n + k)        |
+| Counting Sort         |Ω(n + k)  |Θ(n + k )  |O(n + k) |    O(k)            |
+| Cubesort              |Ω(n)      |Θ(nlog(n)) |O(nlogn) |    O(n)            |
  **Table 1. Sorting algorithms time complexities' [1]** 
 
 Sorting is a process of ordering a list of elements. There are two types of sorting in total: internal sorting and external sorting. The internal sorting is the sort in which the number of elements is small enough to fit into the main memory, and the opposite - the external sorting sorts the elements that are too many so that some of them occupy external storage during the sort. The sorting algorithms that are tested for this report all belong to the internal sorting group and are: Quick Sort, Merge Sort, Heap Sort and Shell sort.
@@ -181,14 +180,12 @@ There are also other variants of notations but due to their irrelevance for this
 For this project, four sorting algorithms were chosen, which in part use separate methodologies. The goal was to analyze and understand the main differences between them, and how they influence efficiency. Table 1 shows the chosen algorithms and the methodology used by them [2].
 
 **Table 1. Selected Algorithms**
-____________________________________________________________________________________________________
 | ***Algorithm***  |**Average Case**|**Worst Case****| **Methodology** | **In-Place**  | **Stable**|
 | -----------------| --------------:|---------------:|----------------:|--------------:|----------:|
 | ***Merge sort*** |O(N logN)       |O(N logN)       |Merging          |No             |Yes        |
 | ***Quick sort*** |O(N logN)       |O(N^2)          |Partitioning     |Yes            |No         |
 | ***Heap sort***  |O(N logN)       |O(N logN)       |Selection        |Yes            |No         |
 | ***Shell sort*** |O(N logN)       |O(N (logN)^2)   |Insertion        |Yes            |No         |
-___________________________________________________________________________________________________
 
 ### Algorithms implementation
 #### Merge Sort
@@ -303,20 +300,20 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 ## Conclusions
 
 ## References
-[1] [Online]. 
-[2] M. A. Weiss, Java, Data Structures And Algorithms In Java, Croydon, UK: Pearson, 2012. 
-[3] G. Seif, "A tour of the top 5 sorting algorithms with Python code," 2018. [Online]. Available: https://medium.com/@george.seif94/a-tour-of-the-top-5-sorting-algorithms-with-python-code-43ea9aa02889. [Accessed 8 5 2020].
+ - [1] [Online]. 
+ - [2] M. A. Weiss, Java, Data Structures And Algorithms In Java, Croydon, UK: Pearson, 2012. 
+ - [3] G. Seif, "A tour of the top 5 sorting algorithms with Python code," 2018. [Online]. Available: https://medium.com/@george.seif94/a-tour-of-the-top-5-sorting-algorithms-with-python-code-43ea9aa02889. [Accessed 8 5 2020].
 
 ## Appendices and enclosures
-**Figure 4. MergeSort.sortRecursive(...)**
-**Figure 5. MergeSort.merge(...)**
-**Figure 6. MergeSort.mergeHalves(...)**
-**Figure 7. MergeSort.addLargerRemaining(...)**
-**Figure 8. QuickSort. Implementation Steps**
-**Figure 9. QuickSort. quickSort(...**)
-**Figure 10. QuickSort. partition(...)**
-**Figure 11. QuickSort. median3Pivot(...)**
-**Figure 12. QuickSort. swapReferences(...)**
-**HeapSort recursive - sort();**
-**HeapSort recursive - heapify();**
-**ShellSort iterative - sort();**
+ - **Figure 4. MergeSort.sortRecursive(...)**
+ - **Figure 5. MergeSort.merge(...)**
+ - **Figure 6. MergeSort.mergeHalves(...)**
+ - **Figure 7. MergeSort.addLargerRemaining(...)**
+ - **Figure 8. QuickSort. Implementation Steps**
+ - **Figure 9. QuickSort. quickSort(...**)
+ - **Figure 10. QuickSort. partition(...)**
+ - **Figure 11. QuickSort. median3Pivot(...)**
+ - **Figure 12. QuickSort. swapReferences(...)**
+ - **HeapSort recursive - sort();**
+ - **HeapSort recursive - heapify();**
+ - **ShellSort iterative - sort();**
