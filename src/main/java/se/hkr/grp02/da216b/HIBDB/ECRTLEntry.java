@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "RTLEntries")
-public class ECRTLEntries {
+public class ECRTLEntry {
     @Id
     @Column(name = "id")
     int id;
@@ -28,7 +28,7 @@ public class ECRTLEntries {
     @Column(name = "workload")
     String workload;
 
-    public ECRTLEntries(int id, Timestamp timestamp, String rtrResult, String targetlang, String targetOS, String workload) {
+    public ECRTLEntry(int id, Timestamp timestamp, String rtrResult, String targetlang, String targetOS, String workload) {
         this.id = id;
         this.timestamp = timestamp;
         this.rtrResult = rtrResult;
