@@ -50,7 +50,7 @@ For the following project a relational database MySQL v5.7 and the following ER 
 ## Tasks
 
 First draft - _Total 104hrs_.
-- [x] ![PRM1 04/30/2020](./assets/labels/prm1-label.png) **`104 HRS`**:bookmark:
+- [x] ![PRM1 30/04/2020](./assets/labels/prm1-label.png) **`104 HRS`**:bookmark:
   - [x]  Create project's structure and working tools (Setup working environment)
     - [x]  ~~Github Repo Setup~~
     - [x]  ~~Github Readme~~
@@ -63,7 +63,7 @@ First draft - _Total 104hrs_.
     - [x]  ~~Timeline Setup w/ milestones~~
     - [x]  ~~Team members invitation to KIB & Working setup~~ 
   
-- [x] ![PRM2 05/07/2020](./assets/labels/prm2-label.png) **`104 HRS`**:bookmark:
+- [x] ![PRM2 07/05/2020](./assets/labels/prm2-label.png) **`104 HRS`**:bookmark:
   - [x] Project setup **`7 HRS`**
     - [x] ~~Project boilerplate~~
     - [x] ~~Dependency management~~
@@ -72,8 +72,8 @@ First draft - _Total 104hrs_.
   - [x] Algorithm implementation (Min.1) **`13 HRS`**
     - [x] ~~Quick Sort~~
     - [x] ~~Merge Sort~~
-    - [ ] Shell Sort
-    - [ ] Heap Sort
+    - [x] ~~Shell Sort~~
+    - [x] ~~Heap Sort~~
   - [x] ~~Unit testing~~ **`23 HRS`**
   - [x] ~~Database Mocks~~ **`15 HRS`**
   - [x] ~~Meeting planning & TO DO definition~~ **`16 HRS`**
@@ -81,23 +81,36 @@ First draft - _Total 104hrs_.
   - [x] ~~Run testing and assure working deployable version~~ **`3 HRS`**
   - [x] ~~Code refactoring, Git revisioning, readme and miscs chores~~ **`11 HRS`**
 
-- [x] ![PRM3 14/07/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
-  - [ ] Database
+- [x] ![PRM3 14/05/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
+  - [x] ~~Database~~
     - [x] ~~DB Design and ER, EER~~
     - [x] ~~Translation of EER into logical model~~
     - [x] ~~Database creation (hosting::gearhost)~~
-    - [ ] Java DB Entity Classes - 1:1 table mapping
-    - [ ] Database adapter | Hibernate or MySQL Connector
-  - [ ] Algorithm implementation
-    - [ ] Quick Sort Median-of-three __comparator__
-    - [ ] Shell Sort
-    - [ ] Heap Sort
-  - [ ] Implement possibility to test both, average and worst case scenarios
-  - [ ] Velocity
+    - [x] ~~Java DB Entity Classes - 1:1 table mapping~~
+    - [x] ~~Database adapter | Hibernate or MySQL Connector~~
+  - [x] ~~Algorithm implementation~~
+    - [x] ~~Quick Sort Median-of-three __comparator__~~
+    - [x] ~~Shell Sort~~
+    - [x] ~~Heap Sort~~
+  - [x] ~~Velocity~~
+  - [x] ~~Meeting planning & TO DO definition **`16 HRS`**~~
+  - [x] ~~Preparation for (each) release **`16 HRS`**~~
+  - [x] ~~Run testing and assure working deployable version **`3 HRS`**~~
+  - [x] ~~Code refactoring, readme and miscs chores **`11 HRS`**~~
+  
+  - [ ] ![PRESENTATION 20/05/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
+  - [ ] Experiment **`16 HRS`**. 
+    - [ ] Data collection **`8 HRS`**. 
+    - [ ] Analyze **`8 HRS`**.
+    - [ ] Result **`8 HRS`**.
+  - [ ] Conclusions **`8 HRS`**.
+  - [ ] Velocity **`16 HRS`**.
   - [ ] Meeting planning & TO DO definition **`16 HRS`**
-  - [ ] Preparation for (each) release **`16 HRS`**
-  - [ ] Run testing and assure working deployable version **`3 HRS`**
-  - [ ] Code refactoring, readme and miscs chores **`11 HRS`**
+  - [ ] Preparation for presentation **`6 HRS`**
+  - [ ] Power point presentation **`16 HRS`**.
+  - [ ] Submit project documentation **`2 HRS`**.
+  
+  
 
 ## Test Driven Development
 
@@ -106,16 +119,26 @@ At the beginning of the project the requirements and objectives of the first spr
 ## Method
 
 ### Create the development environment 
+/** Vincenzo*/
 ### Diagrams
+/** Vincenzo*/
 ### IntelliJ project
+/** Chris*/
 ### Github repository
+/** Chris*/
 ### GitKraken management
+/** Chris*/
 ### Peer-Programming
+/** Alex&Nemanja*/
 ### Research on the selected algorithms
+/** Alex&Nemanja*/
 ### Algorithms implementation
+/** Alex&Nemanja*/
 ### Database implementation
+/** Vincenzo*/
 ### Experiment. Data collection. Analyze
-### Results
+
+## Results
 
 ## Velocity
 The division of the tasks was done in accordance with the estimated working time for a person (26 hours). At the end of each sprint, considering the ideal hours and those necessary to complete the tasks, the velocity was evaluated individually and for the team.
@@ -128,7 +151,7 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | Vincenzo Buono        |            26 |         26 |        1.00 |
 | Nemanja Negovanovic   |            26 |         25 |        1.04 |
 | Alex Oachesu          |            26 |         30 |        0.87 |
-| Christopher Schroter  |            26 |         26 |        1.00 |
+| Christopher Schröter  |            26 |         26 |        1.00 |
 | **Team**              |       **104** |    **107** | **0.97avg** |
 
 ### Second iteration
@@ -138,15 +161,27 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | Vincenzo Buono        |            26 |         37 |        0.70 |
 | Nemanja Negovanovic   |            26 |         26 |        1.00 |
 | Alex Oachesu          |            26 |         32 |        0.81 |
-| Christopher Schroter  |            26 |         28 |        0.93 |
+| Christopher Schröter  |            26 |         28 |        0.93 |
 | **Team**              |       **104** |    **119** | **0.85avg** |
 
 ### Third iteration
 
-| Team Member           | Ideal Hours   | Real Time  | Velocity |
-| ----------------------| -------------:|-----------:|---------:|
-| Vincenzo Buono        |               |            |          |
-| Nemanja Negovanovic   |               |            |          |
-| Alex Oachesu          |               |            |          |
-| Christopher Schroter  |               |            |          |
-| Team                  |               |            |          |
+| Team Member           | Ideal Hours   | Real Time  |    Velocity |
+| ----------------------| -------------:|-----------:|------------:|
+| Vincenzo Buono        |            26 |         26 |        1.00 |
+| Nemanja Negovanovic   |            26 |         27 |        0.96 |
+| Alex Oachesu          |            26 |         26 |        1.00 |
+| Christopher Schröter  |            26 |         25 |        1.04 |
+| **Team**              |       **104** |    **104** | **1.00avg** |
+
+### Presentation
+
+| Team Member           | Ideal Hours   | Real Time  |    Velocity |
+| ----------------------| -------------:|-----------:|------------:|
+| Vincenzo Buono        |            26 |          0 |        0.00 |
+| Nemanja Negovanovic   |            26 |          0 |        0.00 |
+| Alex Oachesu          |            26 |          0 |        0.00 |
+| Christopher Schröter  |            26 |          0 |        0.00 |
+| **Team**              |       **104** |      **0** | **0.00avg** |
+
+## Conclusions
