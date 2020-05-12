@@ -314,6 +314,33 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
+    public static List<ECRTLEntry> getAllRTLEntriesWithTargetlang(String targetLang) {
+        Connection connection = IDBManager.getConnection();
+        List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where targetlang=?");
+            ps.setString(1, targetLang);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                ECRTLEntries.add(new ECRTLEntry(
+                                resultSet.getInt("id"),
+                                resultSet.getTimestamp("timestamp"),
+                                resultSet.getString("RTResult"),
+                                resultSet.getString("targetlang"),
+                                resultSet.getString("targetOS"),
+                                resultSet.getString("Algorithms_name"),
+                                resultSet.getString("workload")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECRTLEntries;
+    }
 
     ////////////////////// RTLENTRIES
 
