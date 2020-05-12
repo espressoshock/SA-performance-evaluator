@@ -4,14 +4,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Algorithms")
-public class ECAlgorithms {
+public class ECAlgorithm {
     @Id
     @Column(name = "name")
     String name;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
-    String type;
+    ECAlgorithmType type;
 
     @Column(name = "complexity_bestCase")
     String complexityBestCase;
@@ -23,6 +23,15 @@ public class ECAlgorithms {
     @Column(name = "stability", columnDefinition = "tinyint default false")
     Boolean stability;
 
+    public ECAlgorithm(String name, ECAlgorithmType type, String complexityBestCase, String complexityAverageCase, String complexityWorstCase, Boolean stability) {
+        this.name = name;
+        this.type = type;
+        this.complexityBestCase = complexityBestCase;
+        this.complexityAverageCase = complexityAverageCase;
+        this.complexityWorstCase = complexityWorstCase;
+        this.stability = stability;
+    }
+
     public String getName() {
         return name;
     }
@@ -31,11 +40,11 @@ public class ECAlgorithms {
         this.name = name;
     }
 
-    public String getType() {
+    public ECAlgorithmType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(ECAlgorithmType type) {
         this.type = type;
     }
 
@@ -65,6 +74,9 @@ public class ECAlgorithms {
 
     public Boolean getStability() {
         return stability;
+    }
+    public byte getStabilityNumber(){
+        return (byte) (this.stability ? 1 : 0);
     }
 
     public void setStability(Boolean stability) {
