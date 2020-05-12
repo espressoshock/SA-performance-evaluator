@@ -1,13 +1,14 @@
 package se.hkr.grp02.da216b.DAL;
 
 import com.mysql.cj.jdbc.Driver;
-import se.hkr.grp02.da216b.HIBDB.ECAlgorithms;
+import se.hkr.grp02.da216b.HIBDB.ECAlgorithm;
+import se.hkr.grp02.da216b.HIBDB.ECAlgorithmType;
 import se.hkr.grp02.da216b.utilities.Algorithms;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public interface IDBManager {
     public static final String CONNECTION_URL = "jdbc:mysql://den1.mysql6.gear.host:3306/sapevaluatordb";
@@ -29,7 +30,7 @@ public interface IDBManager {
      * @param algorithm to be added
      * @return transaction result
      */
-    public static Boolean insertAlgorithm(ECAlgorithms algorithm){
+    public static Boolean insertAlgorithm(ECAlgorithm algorithm){
         Connection connection = IDBManager.getConnection();
         try{
             PreparedStatement ps = connection.prepareStatement("INSERT INTO algorithms VALUES (?, ?,?,?,?,?)");
@@ -45,6 +46,31 @@ public interface IDBManager {
         }
         return false;
     };
+    public static List<ECAlgorithm> getAllAlgorithms(){
+        Connection connection = IDBManager.getConnection();
+        List<ECAlgorithm>ECAlgorithms = new ArrayList<>();
+
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM algorithms");
+
+            while(resultSet.next()){
+                ECAlgorithms.add(new ECAlgorithm(
+                        resultSet.getString("name"),
+                        ECAlgorithmType.valueOf(resultSet.getString("type")),
+                        resultSet.getString("complexity_bestCase"),
+                        resultSet.getString("complexity_averageCase"),
+                        resultSet.getString("complexity_worstCase"),
+                        resultSet.getBoolean("stability"))
+                );
+            }
+            return ECAlgorithms;
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     /******************* ALGORITHM *******************/
 
