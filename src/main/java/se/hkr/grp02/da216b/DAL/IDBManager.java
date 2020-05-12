@@ -3,6 +3,7 @@ package se.hkr.grp02.da216b.DAL;
 import com.mysql.cj.jdbc.Driver;
 import se.hkr.grp02.da216b.HIBDB.ECAlgorithm;
 import se.hkr.grp02.da216b.HIBDB.ECAlgorithmType;
+import se.hkr.grp02.da216b.HIBDB.ECRTLEntry;
 import se.hkr.grp02.da216b.utilities.Algorithms;
 import se.hkr.grp02.da216b.utilities.Result;
 
@@ -25,7 +26,6 @@ public interface IDBManager {
         }
     }
 
-    ;
     /******************* ALGORITHM *******************/
 
     /***
@@ -173,6 +173,26 @@ public interface IDBManager {
     }
 
     /******************* ALGORITHM *******************/
+
+
+    /******************* RTLENTRIES *******************/
+    public static Boolean insertRTLEntry(ECRTLEntry rtlEntry) {
+        Connection connection = IDBManager.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO rtlentries VALUES (NULL, NULL,?,?,?,?,?)");
+            ps.setString(1, rtlEntry.getRtrResult());
+            ps.setString(2, rtlEntry.getTargetlang());
+            ps.setString(3, rtlEntry.getTargetOS());
+            ps.setString(4, rtlEntry.getAlgorithmFK());
+            ps.setString(5, rtlEntry.getWorkload());
+
+            if (ps.executeUpdate() == 1) return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    /******************* RTLENTRIES *******************/
 
 
 }
