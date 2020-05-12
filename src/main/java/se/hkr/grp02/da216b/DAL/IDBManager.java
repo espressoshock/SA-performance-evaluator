@@ -342,6 +342,91 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
+    public static List<ECRTLEntry> getAllRTLEntriesWithTargetOS(String targeOS) {
+        Connection connection = IDBManager.getConnection();
+        List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where targetOS=?");
+            ps.setString(1, targeOS);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                ECRTLEntries.add(new ECRTLEntry(
+                                resultSet.getInt("id"),
+                                resultSet.getTimestamp("timestamp"),
+                                resultSet.getString("RTResult"),
+                                resultSet.getString("targetlang"),
+                                resultSet.getString("targetOS"),
+                                resultSet.getString("Algorithms_name"),
+                                resultSet.getString("workload")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECRTLEntries;
+    }
+
+    public static List<ECRTLEntry> getAllRTLEntriesWithWorkLoad(int workload) {
+        Connection connection = IDBManager.getConnection();
+        List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where workload=?");
+            ps.setInt(1, workload);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                ECRTLEntries.add(new ECRTLEntry(
+                                resultSet.getInt("id"),
+                                resultSet.getTimestamp("timestamp"),
+                                resultSet.getString("RTResult"),
+                                resultSet.getString("targetlang"),
+                                resultSet.getString("targetOS"),
+                                resultSet.getString("Algorithms_name"),
+                                resultSet.getString("workload")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECRTLEntries;
+    }
+
+    public static List<ECRTLEntry> getAllRTLEntriesWithWorkLoad(int workloadInclusiveLowerBound, int workloadInclusiveUpperBound) {
+        Connection connection = IDBManager.getConnection();
+        List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where workload BETWEEN ? AND ?");
+            ps.setInt(1, workloadInclusiveLowerBound);
+            ps.setInt(2, workloadInclusiveUpperBound);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                ECRTLEntries.add(new ECRTLEntry(
+                                resultSet.getInt("id"),
+                                resultSet.getTimestamp("timestamp"),
+                                resultSet.getString("RTResult"),
+                                resultSet.getString("targetlang"),
+                                resultSet.getString("targetOS"),
+                                resultSet.getString("Algorithms_name"),
+                                resultSet.getString("workload")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECRTLEntries;
+    }
+
     ////////////////////// RTLENTRIES
 
 
