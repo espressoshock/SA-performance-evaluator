@@ -4,13 +4,11 @@ import com.mysql.cj.jdbc.Driver;
 import se.hkr.grp02.da216b.HIBDB.ECAlgorithm;
 import se.hkr.grp02.da216b.HIBDB.ECAlgorithmType;
 import se.hkr.grp02.da216b.HIBDB.ECRTLEntry;
-import se.hkr.grp02.da216b.utilities.Algorithms;
-import se.hkr.grp02.da216b.utilities.Result;
+
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public interface IDBManager {
     public static final String CONNECTION_URL = "jdbc:mysql://den1.mysql6.gear.host:3306/sapevaluatordb";
@@ -26,10 +24,10 @@ public interface IDBManager {
         }
     }
 
-    /******************* ALGORITHM *******************/
+    ////////////////////// ALGORITHMs
 
     /***
-     * Insert algorithm entry
+     * [INSERT] Insert algorithm entry
      * @param algorithm to be added
      * @return transaction result
      */
@@ -50,6 +48,10 @@ public interface IDBManager {
         return false;
     }
 
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all algorithms entries
+     * @return all ECAlgorithm entries
+     */
     public static List<ECAlgorithm> getAllAlgorithms() {
         Connection connection = IDBManager.getConnection();
         List<ECAlgorithm> ECAlgorithms = new ArrayList<>();
@@ -76,6 +78,11 @@ public interface IDBManager {
         return null;
     }
 
+    /***
+     * [GET][SINGLE-ENTRY] Get all algorithms with name
+     * @param algorithmName algorithm name to filter by
+     * @return All algorithms with provided name
+     */
     public static ECAlgorithm getAlgorithmWithName(String algorithmName) {
         Connection connection = IDBManager.getConnection();
         try {
@@ -99,9 +106,14 @@ public interface IDBManager {
         return null;
     }
 
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all algorithms given average case
+     * @param algorithmAverageCase average case
+     * @return All algorithm with provided average case
+     */
     public static List<ECAlgorithm> getAllAlgorithmsWithAverageCase(String algorithmAverageCase) {
         Connection connection = IDBManager.getConnection();
-        List<ECAlgorithm>ECAlgorithms = new ArrayList<>();
+        List<ECAlgorithm> ECAlgorithms = new ArrayList<>();
 
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM algorithms WHERE complexity_averageCase=?");
@@ -123,9 +135,15 @@ public interface IDBManager {
         }
         return ECAlgorithms;
     }
+
+    /***
+     * [GET][MULTIPLE-ENTRY] Get All algorithm given best case
+     * @param algorithmBestCase best case
+     * @return All algorithm with provided best case
+     */
     public static List<ECAlgorithm> getAllAlgorithmsWithBestCase(String algorithmBestCase) {
         Connection connection = IDBManager.getConnection();
-        List<ECAlgorithm>ECAlgorithms = new ArrayList<>();
+        List<ECAlgorithm> ECAlgorithms = new ArrayList<>();
 
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM algorithms WHERE complexity_bestCase=?");
@@ -147,9 +165,15 @@ public interface IDBManager {
         }
         return ECAlgorithms;
     }
+
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all algorithms given worst case
+     * @param algorithmWorstCase worst case
+     * @return All algorithms with worst case
+     */
     public static List<ECAlgorithm> getAllAlgorithmsWithWorstCase(String algorithmWorstCase) {
         Connection connection = IDBManager.getConnection();
-        List<ECAlgorithm>ECAlgorithms = new ArrayList<>();
+        List<ECAlgorithm> ECAlgorithms = new ArrayList<>();
 
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM algorithms WHERE complexity_worstCase=?");
@@ -172,10 +196,16 @@ public interface IDBManager {
         return ECAlgorithms;
     }
 
-    /******************* ALGORITHM *******************/
+    ////////////////////// ALGORITHMs
 
 
-    /******************* RTLENTRIES *******************/
+    ////////////////////// RTLENTRIES
+
+    /***
+     * [INSERT] Insert RTLEntry
+     * @param rtlEntry to insert
+     * @return transaction result
+     */
     public static Boolean insertRTLEntry(ECRTLEntry rtlEntry) {
         Connection connection = IDBManager.getConnection();
         try {
@@ -192,6 +222,11 @@ public interface IDBManager {
         }
         return false;
     }
+
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all RTLEntries
+     * @return all RTLEntry(s)
+     */
     public static List<ECRTLEntry> getAllRTLEntries() {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
@@ -202,13 +237,13 @@ public interface IDBManager {
 
             while (resultSet.next()) {
                 ECRTLEntries.add(new ECRTLEntry(
-                        resultSet.getInt("id"),
-                        resultSet.getTimestamp("timestamp"),
-                        resultSet.getString("RTResult"),
-                        resultSet.getString("targetlang"),
-                        resultSet.getString("targetOS"),
-                        resultSet.getString("Algorithms_name"),
-                        resultSet.getString("workload")
+                                resultSet.getInt("id"),
+                                resultSet.getTimestamp("timestamp"),
+                                resultSet.getString("RTResult"),
+                                resultSet.getString("targetlang"),
+                                resultSet.getString("targetOS"),
+                                resultSet.getString("Algorithms_name"),
+                                resultSet.getString("workload")
                         )
                 );
             }
@@ -217,6 +252,12 @@ public interface IDBManager {
         }
         return ECRTLEntries;
     }
+
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all RTLEntry(s) given an algorithm name
+     * @param algorithmName
+     * @return
+     */
     public static List<ECRTLEntry> getAllRTLEntriesWithAlgorithmName(String algorithmName) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
@@ -246,7 +287,7 @@ public interface IDBManager {
     }
 
 
-    /******************* RTLENTRIES *******************/
+    ////////////////////// RTLENTRIES
 
 
 }
