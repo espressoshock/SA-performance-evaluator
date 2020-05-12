@@ -50,8 +50,6 @@ public interface IDBManager {
         return false;
     }
 
-    ;
-
     public static List<ECAlgorithm> getAllAlgorithms() {
         Connection connection = IDBManager.getConnection();
         List<ECAlgorithm> ECAlgorithms = new ArrayList<>();
@@ -99,6 +97,31 @@ public interface IDBManager {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static List<ECAlgorithm> getAllAlgorithmsWithAverageCase(String algorithmAverageCase) {
+        Connection connection = IDBManager.getConnection();
+        List<ECAlgorithm>ECAlgorithms = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM algorithms WHERE complexity_averageCase=?");
+            ps.setString(1, algorithmAverageCase);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next())
+                ECAlgorithms.add(new ECAlgorithm(
+                        resultSet.getString("name"),
+                        ECAlgorithmType.valueOf(resultSet.getString("type")),
+                        resultSet.getString("complexity_bestCase"),
+                        resultSet.getString("complexity_averageCase"),
+                        resultSet.getString("complexity_worstCase"),
+                        resultSet.getBoolean("stability")));
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECAlgorithms;
     }
 
     /******************* ALGORITHM *******************/
