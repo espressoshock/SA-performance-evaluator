@@ -25,22 +25,27 @@ public class ECRTLEntry {
     @Column(name = "targetOS")
     String targetOS;
 
+    @Column(name = "Algorithms_name")
+    String algorithmFK;
+
     @Column(name = "workload")
     String workload;
 
-    public ECRTLEntry(String rtrResult, String targetlang, String targetOS, String workload) {
-        this.rtrResult = rtrResult;
-        this.targetlang = targetlang;
-        this.targetOS = targetOS;
-        this.workload = workload;
-    }
-
-    public ECRTLEntry(int id, Timestamp timestamp, String rtrResult, String targetlang, String targetOS, String workload) {
+    public ECRTLEntry(int id, Timestamp timestamp, String rtrResult, String targetlang, String targetOS, String algorithmFK, String workload) {
         this.id = id;
         this.timestamp = timestamp;
         this.rtrResult = rtrResult;
         this.targetlang = targetlang;
         this.targetOS = targetOS;
+        this.algorithmFK = algorithmFK;
+        this.workload = workload;
+    }
+
+    public ECRTLEntry(String rtrResult, String targetlang, String targetOS, String algorithmFK, String workload) {
+        this.rtrResult = rtrResult;
+        this.targetlang = targetlang;
+        this.targetOS = targetOS;
+        this.algorithmFK = algorithmFK;
         this.workload = workload;
     }
 
@@ -90,5 +95,13 @@ public class ECRTLEntry {
 
     public void setWorkload(String workload) {
         this.workload = workload;
+    }
+
+    public String getAlgorithmFK() {
+        return algorithmFK;
+    }
+
+    public void setAlgorithmFK(String algorithmFK) {
+        this.algorithmFK = algorithmFK;
     }
 }
