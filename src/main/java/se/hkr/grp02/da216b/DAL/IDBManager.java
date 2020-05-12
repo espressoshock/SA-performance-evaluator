@@ -286,6 +286,11 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
+    /***
+     * [GET][MULTIPLE-ENTRY]
+     * @param rtResult to filter entries
+     * @return all entries that matches provided filter
+     */
     public static List<ECRTLEntry> getAllRTLEntriesWithRTResult(String rtResult) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
@@ -314,6 +319,11 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided targetlang
+     * @param targetLang
+     * @return
+     */
     public static List<ECRTLEntry> getAllRTLEntriesWithTargetlang(String targetLang) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
@@ -342,13 +352,18 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
-    public static List<ECRTLEntry> getAllRTLEntriesWithTargetOS(String targeOS) {
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided targetOS
+     * @param targetOS targetOS to filter entries by
+     * @return All entries filtered by targeOS
+     */
+    public static List<ECRTLEntry> getAllRTLEntriesWithTargetOS(String targetOS) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
 
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where targetOS=?");
-            ps.setString(1, targeOS);
+            ps.setString(1, targetOS);
 
             ResultSet resultSet = ps.executeQuery();
 
@@ -370,6 +385,11 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided workload (exact-match)
+     * @param workload
+     * @return All entries with provided workload
+     */
     public static List<ECRTLEntry> getAllRTLEntriesWithWorkLoad(int workload) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
@@ -398,6 +418,12 @@ public interface IDBManager {
         return ECRTLEntries;
     }
 
+    /***
+     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) between (inclusive) provided workload
+     * @param workloadInclusiveLowerBound lower bound (inclusive)
+     * @param workloadInclusiveUpperBound upper bound (inclusive)
+     * @return All entries with workload between lower and upper bound (inclusive)
+     */
     public static List<ECRTLEntry> getAllRTLEntriesWithWorkLoad(int workloadInclusiveLowerBound, int workloadInclusiveUpperBound) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
