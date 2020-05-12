@@ -133,9 +133,8 @@ At the beginning of the project the requirements and objectives of the first spr
 ### Research on the selected algorithms
 #### Sorting Algorithms
 **Array Sorting Algorithms**
-|    **Algorithm **     |      **Time Complexity**       |**Space Complexity**|
-|-----------------------|---------:|----------:|--------:|-------------------:|
-|                       |   Best   |  Average  |  Worst  |       Worst        |
+
+|  **Algorithm **       |   Best   |  Average  |  Worst  |**Space Complexity**|
 | ----------------------| --------:|----------:|--------:|-------------------:|
 | Quicksort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |    O(log(n))       |
 | Mergesort             |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |    O(n)            |
@@ -179,7 +178,7 @@ There are also other variants of notations but due to their irrelevance for this
 #### Selected Algorithms Complexity
 For this project, four sorting algorithms were chosen, which in part use separate methodologies. The goal was to analyze and understand the main differences between them, and how they influence efficiency. Table 1 shows the chosen algorithms and the methodology used by them [2].
 
-**Table 1. Selected Algorithms**
+**Table 2. Selected Algorithms**
 | ***Algorithm***  |**Average Case**|**Worst Case****| **Methodology** | **In-Place**  | **Stable**|
 | -----------------| --------------:|---------------:|----------------:|--------------:|----------:|
 | ***Merge sort*** |O(N logN)       |O(N logN)       |Merging          |No             |Yes        |
@@ -258,7 +257,7 @@ The division of the tasks was done in accordance with the estimated working time
 At the end of the project, the velocity is evaluated for the whole project. It is used to estimate the impact of peer-programming on individual and team efficiency.
 
 ### First iteration
-
+**Table3**
 | Team Member           | Ideal Hours   | Real Time  |    Velocity |
 | ----------------------| -------------:|-----------:|------------:|
 | Vincenzo Buono        |            26 |         26 |        1.00 |
@@ -268,7 +267,7 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | **Team**              |       **104** |    **107** | **0.97avg** |
 
 ### Second iteration
-
+**Table4**
 | Team Member           | Ideal Hours   | Real Time  |    Velocity |
 | ----------------------| -------------:|-----------:|------------:|
 | Vincenzo Buono        |            26 |         37 |        0.70 |
@@ -278,7 +277,7 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | **Team**              |       **104** |    **119** | **0.85avg** |
 
 ### Third iteration
-
+**Table5**
 | Team Member           | Ideal Hours   | Real Time  |    Velocity |
 | ----------------------| -------------:|-----------:|------------:|
 | Vincenzo Buono        |            26 |         26 |        1.00 |
@@ -288,7 +287,7 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | **Team**              |       **104** |    **104** | **1.00avg** |
 
 ### Presentation
-
+**Table6**
 | Team Member           | Ideal Hours   | Real Time  |    Velocity |
 | ----------------------| -------------:|-----------:|------------:|
 | Vincenzo Buono        |            26 |          0 |        0.00 |
