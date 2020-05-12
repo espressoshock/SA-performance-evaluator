@@ -217,6 +217,34 @@ public interface IDBManager {
         }
         return ECRTLEntries;
     }
+    public static List<ECRTLEntry> getAllRTLEntriesWithAlgorithmName(String algorithmName) {
+        Connection connection = IDBManager.getConnection();
+        List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where Algorithms_name=?");
+            ps.setString(1, algorithmName);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                ECRTLEntries.add(new ECRTLEntry(
+                                resultSet.getInt("id"),
+                                resultSet.getTimestamp("timestamp"),
+                                resultSet.getString("RTResult"),
+                                resultSet.getString("targetlang"),
+                                resultSet.getString("targetOS"),
+                                resultSet.getString("Algorithms_name"),
+                                resultSet.getString("workload")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECRTLEntries;
+    }
+
 
     /******************* RTLENTRIES *******************/
 
