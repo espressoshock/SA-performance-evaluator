@@ -133,7 +133,7 @@ At the beginning of the project the requirements and objectives of the first spr
 ### Research on the selected algorithms
 #### Sorting Algorithms
 **Table 1. Sorting algorithms time complexities' [1]** 
-|    **Algorithm        |   Best   |  Average  |  Worst  |  Space Complexity**|
+|      Algorithm        |   Best   |  Average  |  Worst  |  Space Complexity  |
 | ----------------------| --------:|----------:|--------:|-------------------:|
 | Quicksort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |    O(log(n))       |
 | Mergesort             |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |    O(n)            |
@@ -176,7 +176,7 @@ There are also other variants of notations but due to their irrelevance for this
 #### Selected Algorithms Complexity
 For this project, four sorting algorithms were chosen, which in part use separate methodologies. The goal was to analyze and understand the main differences between them, and how they influence efficiency. Table 1 shows the chosen algorithms and the methodology used by them [2].
 **Table 2. Selected Algorithms**
-| ***Algorithm***  |**Average Case**|**Worst Case****| **Methodology** | **In-Place**  | **Stable**|
+|    Algorithm     |  Average Case  |  Worst Case    |   Methodology   |   In-Place    |   Stable  |
 | -----------------| --------------:|---------------:|----------------:|--------------:|----------:|
 | ***Merge sort*** |O(N logN)       |O(N logN)       |Merging          |No             |Yes        |
 | ***Quick sort*** |O(N logN)       |O(N^2)          |Partitioning     |Yes            |No         |
