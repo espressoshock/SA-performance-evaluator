@@ -132,9 +132,8 @@ At the beginning of the project the requirements and objectives of the first spr
 /** Alex&Nemanja*/
 ### Research on the selected algorithms
 #### Sorting Algorithms
-**Array Sorting Algorithms**
-
-|  **Algorithm **       |   Best   |  Average  |  Worst  |**Space Complexity**|
+**Table 1. Sorting algorithms time complexities' [1]** 
+|    **Algorithm        |   Best   |  Average  |  Worst  |  Space Complexity**|
 | ----------------------| --------:|----------:|--------:|-------------------:|
 | Quicksort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |    O(log(n))       |
 | Mergesort             |Ω(nlog(n))|Θ(nlog(n)) |O(nlogn) |    O(n)            |
@@ -149,7 +148,6 @@ At the beginning of the project the requirements and objectives of the first spr
 | Radix Sort            |Ω(nk)     |Θ(nk)      |O(nk)    |    O(n + k)        |
 | Counting Sort         |Ω(n + k)  |Θ(n + k )  |O(n + k) |    O(k)            |
 | Cubesort              |Ω(n)      |Θ(nlog(n)) |O(nlogn) |    O(n)            |
- **Table 1. Sorting algorithms time complexities' [1]** 
 
 Sorting is a process of ordering a list of elements. There are two types of sorting in total: internal sorting and external sorting. The internal sorting is the sort in which the number of elements is small enough to fit into the main memory, and the opposite - the external sorting sorts the elements that are too many so that some of them occupy external storage during the sort. The sorting algorithms that are tested for this report all belong to the internal sorting group and are: Quick Sort, Merge Sort, Heap Sort and Shell sort.
 
@@ -177,7 +175,6 @@ There are also other variants of notations but due to their irrelevance for this
 
 #### Selected Algorithms Complexity
 For this project, four sorting algorithms were chosen, which in part use separate methodologies. The goal was to analyze and understand the main differences between them, and how they influence efficiency. Table 1 shows the chosen algorithms and the methodology used by them [2].
-
 **Table 2. Selected Algorithms**
 | ***Algorithm***  |**Average Case**|**Worst Case****| **Methodology** | **In-Place**  | **Stable**|
 | -----------------| --------------:|---------------:|----------------:|--------------:|----------:|
