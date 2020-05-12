@@ -23,6 +23,15 @@ public class ECAlgorithms {
     @Column(name = "stability", columnDefinition = "tinyint default false")
     Boolean stability;
 
+    public ECAlgorithms(String name, String type, String complexityBestCase, String complexityAverageCase, String complexityWorstCase, Boolean stability) {
+        this.name = name;
+        this.type = type;
+        this.complexityBestCase = complexityBestCase;
+        this.complexityAverageCase = complexityAverageCase;
+        this.complexityWorstCase = complexityWorstCase;
+        this.stability = stability;
+    }
+
     public String getName() {
         return name;
     }
