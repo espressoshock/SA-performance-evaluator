@@ -192,6 +192,32 @@ public interface IDBManager {
         }
         return false;
     }
+    public static List<ECRTLEntry> getAllRTLEntries() {
+        Connection connection = IDBManager.getConnection();
+        List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
+
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM rtlentries");
+
+            while (resultSet.next()) {
+                ECRTLEntries.add(new ECRTLEntry(
+                        resultSet.getInt("id"),
+                        resultSet.getTimestamp("timestamp"),
+                        resultSet.getString("RTResult"),
+                        resultSet.getString("targetlang"),
+                        resultSet.getString("targetOS"),
+                        resultSet.getString("Algorithms_name"),
+                        resultSet.getString("workload")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ECRTLEntries;
+    }
+
     /******************* RTLENTRIES *******************/
 
 
