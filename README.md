@@ -110,27 +110,33 @@ First draft - _Total 104hrs_.
   - [ ] Power point presentation **`16 HRS`**.
   - [ ] Submit project documentation **`2 HRS`**.
   
-  
-
-## Test Driven Development
-
-At the beginning of the project the requirements and objectives of the first sprint were analyzed. Entities were built and the relationships between them was established. Based on these data the unit tests were built. Methods were developed and automatic testing was used.
 
 ## Method
-
 ### Create the development environment 
 /** Vincenzo*/
+
 ### IntelliJ project
 /** Chris*/
+
 ### Github repository
 /** Chris*/
+
 ### GitKraken management
 /** Chris*/
-### Peer-Programming
-/** Alex&Nemanja*/
+
+### XP development
+#### Peer-Programming 
+Being part of the methodology used by XP, which in turn is an Agile method, pair-programming has proven to be efficient, useful, and a good way to hold the team accountable for the code as a whole. This has led to the improvement and efficiency of the correlation of the work of the members of the development team. Given the particularities of this project, XP was the ideal choice for development. Iterations of a week, possible sudden changes, the need to be aware of the changes in the work of each team member. All this has made peer-programming a vital tool. Even though for some tasks the workload was divided between the members of a team and done individually, the principles of peer-progrmaing were used. The tasks were analyzed together, strategies and steps were decided, and then the implementation followed the common decisions. The refactoring of the individual work was done constantly in teams of two, or periodically jointly by the whole team.
+
+#### Test Driven Development
+At the beginning of the project the requirements and objectives of the first sprint were analyzed. Entities were built and the relationships between them was established. Based on these data, the unit tests were built. Methods were developed and automatic testing was used. This methology was used along of each sprint, for the most of the features.
+
+#### Meetings 
+The meetings had an important role in the structure of the project, being the place where the development decisions were taken together. The sessions had three characteristics: after the meeting with the teachers; during the sprint; before meeting with teachers. After the meeting with the teachers, the teams were established, the tasks were assigned to the teams, deadlines were established. During the sprint the sessions were generally within teams of two, and generally aimed at a breakdown of tasks into subtasks, their individual distribution, and pair-programming (where appropriate) followed by rafactoring. The meetings before the meeting with the teachers aimed at preparing the deliverables, thinking about the objectives, the steps to follow in the next iteration.
+
 ### Research on the selected algorithms
 #### Sorting Algorithms
-**Table 1. Sorting algorithms time complexities' [1]**
+**Table 1. Sorting algorithms time complexities [1]**
 
 |      Algorithm        |   Best   |  Average  |  Worst  |  Space Complexity  |
 | ----------------------| --------:|----------:|--------:|-------------------:|
@@ -247,9 +253,12 @@ The algorithm includes only one method. The method sort(); consists of one for l
 
 ### Database implementation
 /** Vincenzo*/
+
 ### Experiment. Data collection. Analyze
+/** Vincenzo, Nemanja, Alex, Chris*/
 
 ## Results
+/** Vincenzo, Nemanja, Alex, Chris*/
 
 ## Velocity
 The division of the tasks was done in accordance with the estimated working time for a person (26 hours). At the end of each sprint, considering the ideal hours and those necessary to complete the tasks, the velocity was evaluated individually and for the team.
@@ -294,6 +303,7 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | Alex Oachesu          |            26 |          0 |        0.00 |
 | Christopher Schröter  |            26 |          0 |        0.00 |
 | **Team**              |       **104** |      **0** | **0.00avg** |
+| **Overall**           |       **416** |      **0** | **0.00avg** |
 
 ## Conclusions
 
