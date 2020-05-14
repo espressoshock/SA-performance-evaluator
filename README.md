@@ -100,13 +100,13 @@ First draft - _Total 104hrs_.
   
  - [ ] ![PRESENTATION 20/05/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
   - [ ] Experiment **`16 HRS`**. 
-    - [ ] Data collection **`8 HRS`**. 
-    - [ ] Analyze **`8 HRS`**.
+    - [ ] Data collection **`12 HRS`**. 
+    - [ ] Analyze **`12 HRS`**.
     - [ ] Result **`8 HRS`**.
   - [ ] Conclusions **`8 HRS`**.
-  - [ ] Velocity **`16 HRS`**.
+  - [ ] Velocity **`2 HRS`**.
   - [ ] Meeting planning & TO DO definition **`16 HRS`**
-  - [ ] Preparation for presentation **`6 HRS`**
+  - [ ] Preparation for presentation **`12 HRS`**
   - [ ] Power point presentation **`16 HRS`**.
   - [ ] Submit project documentation **`2 HRS`**.
   
@@ -132,7 +132,8 @@ At the beginning of the project the requirements and objectives of the first spr
 /** Alex&Nemanja*/
 ### Research on the selected algorithms
 #### Sorting Algorithms
-**Table 1. Sorting algorithms time complexities' [1]** 
+**Table 1. Sorting algorithms time complexities' [1]**
+
 |      Algorithm        |   Best   |  Average  |  Worst  |  Space Complexity  |
 | ----------------------| --------:|----------:|--------:|-------------------:|
 | Quicksort             |Ω(nlog(n))|Θ(nlog(n)) |O(n^2)   |    O(log(n))       |
@@ -191,6 +192,7 @@ Merge sort is recommended to be used for sorting large collections that provide 
 
 ##### Java Implementation
 ***Figure 2. Overview of Merge Sort class***
+
 Merge sort was implemented recursively. The base case is when the list has one element. The collection is divided in two, recursively, until the collection’s size to be divided is 1. From this point, the collections are merged back, recursively, two by two, sorted, until the initial collection is rebuilt sorted. Figure 1 shows an overview over the MergeSortRecursive class.  To serve the purpose of this project, the 'sort' method is used to call the 'sortRecursive' method, and then return the sorted collection. The 'sortRecursive' method will split the collection and make recursive calls for the two halves, until the base case is reached. At that point the 'merge' method will take the two halves as parameters and merges them in natural order into a single collection. The 'merge' method calls the 'mergeHalves' and 'addLargerRemaining' methods which will be explained in the next subchapter. 
 
 ##### Time Complexity Analysis
@@ -209,6 +211,7 @@ Quick sort is recommended for large collections that provide a random access to 
 
 ##### Java Implementation
 **Figure 3. QuickSort. Overview**
+
 The algorithm was implemented in the following steps: the sort() method calls the quickSort() method to sort a collection; the quickSort() method takes the collection as a parameter, verifies that it does not meet the conditions for the collection to be sorted, and calls the partition() method to perform the necessary comparisons and exchanges for this partition; the partition() method will use the median3Pivot() method to choose the pivot, and then perform the comparisons and swapping for the elements to be swapped; the pivot is used to create two partitions that are recursively sorted by calling for each the quickSort() method; when the size of the partitions will be 1 the collection will be sorted; the sort () method will return the sorted collection.
 
 ##### Time Complexity Analysis
@@ -238,6 +241,7 @@ Shell sort, also referred to as diminishing increment sort is a comparative algo
 
 ##### Java Implementation
 **figure Shell Sort overview**
+
 The algorithm includes only one method. The method sort(); consists of one for loop and one nested for loop. The first for loop regulates the gap size and is executed logN times where N is the size of the collection to be sorted. The second loop increments the current index by one until it reaches the last element of the collection. The elements are compared and swapped if conditions are made. In this case, the data is sorted in ascending order so the smaller value gets placed to the left of the gap.
 
 ##### Time Complexity Analysis 
@@ -301,15 +305,15 @@ At the end of the project, the velocity is evaluated for the whole project. It i
  - [3] G. Seif, "A tour of the top 5 sorting algorithms with Python code," 2018. [Online]. Available: https://medium.com/@george.seif94/a-tour-of-the-top-5-sorting-algorithms-with-python-code-43ea9aa02889. [Accessed 8 5 2020].
 
 ## Appendices and enclosures
- - **Figure 4. MergeSort.sortRecursive(...)**
- - **Figure 5. MergeSort.merge(...)**
- - **Figure 6. MergeSort.mergeHalves(...)**
- - **Figure 7. MergeSort.addLargerRemaining(...)**
- - **Figure 8. QuickSort. Implementation Steps**
- - **Figure 9. QuickSort. quickSort(...**)
- - **Figure 10. QuickSort. partition(...)**
- - **Figure 11. QuickSort. median3Pivot(...)**
- - **Figure 12. QuickSort. swapReferences(...)**
- - **HeapSort recursive - sort();**
- - **HeapSort recursive - heapify();**
- - **ShellSort iterative - sort();**
+ - Figure 4. MergeSort.sortRecursive(...)
+ - Figure 5. MergeSort.merge(...)
+ - Figure 6. MergeSort.mergeHalves(...)
+ - Figure 7. MergeSort.addLargerRemaining(...)
+ - Figure 8. QuickSort. Implementation Steps
+ - Figure 9. QuickSort. quickSort(...)
+ - Figure 10. QuickSort. partition(...)
+ - Figure 11. QuickSort. median3Pivot(...)
+ - Figure 12. QuickSort. swapReferences(...)
+ - HeapSort recursive - sort()
+ - HeapSort recursive - heapify()
+ - ShellSort iterative - sort()
