@@ -125,6 +125,8 @@ First draft - _Total 104hrs_.
 /** Chris*/
 
 ### XP development
+During this project the Agile principles were used, more precisely XP. The fact that the project took place over a limited period of time, in which various factors involved changes that had to be incorporated quickly, made XP a necessity. Even if the development team did not benefit from an adequate logistics that would make it possible to arrange a common space that would meet the physical conditions XP, the principles of collaboration and common responsibility were implemented. Also followed were TDD development strategies, peer-programming, story cards broken down into task cards, meetings.
+
 #### Peer-Programming 
 Being part of the methodology used by XP, which in turn is an Agile method, pair-programming has proven to be efficient, useful, and a good way to hold the team accountable for the code as a whole. This has led to the improvement and efficiency of the correlation of the work of the members of the development team. Given the particularities of this project, XP was the ideal choice for development. Iterations of a week, possible sudden changes, the need to be aware of the changes in the work of each team member. All this has made peer-programming a vital tool. Even though for some tasks the workload was divided between the members of a team and done individually, the principles of peer-progrmaing were used. The tasks were analyzed together, strategies and steps were decided, and then the implementation followed the common decisions. The refactoring of the individual work was done constantly in teams of two, or periodically jointly by the whole team.
 
