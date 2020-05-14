@@ -98,7 +98,7 @@ First draft - _Total 104hrs_.
   - [x] ~~Run testing and assure working deployable version **`3 HRS`**~~
   - [x] ~~Code refactoring, readme and miscs chores **`11 HRS`**~~
   
- - [ ] ![PRESENTATION 20/05/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
+ - [ ] ![PRESENTATION 19/05/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
   - [ ] Experiment **`16 HRS`**. 
     - [ ] Data collection **`12 HRS`**. 
     - [ ] Analyze **`12 HRS`**.
@@ -256,11 +256,19 @@ The algorithm includes only one method. The method sort(); consists of one for l
 ### Database implementation
 /** Vincenzo*/
 
-### Experiment. Data collection. Analyze
+## Experiment 
 /** Vincenzo, Nemanja, Alex, Chris*/
 
-## Results
+### Data collection 
 /** Vincenzo, Nemanja, Alex, Chris*/
+
+#### Results
+/** Vincenzo, Nemanja, Alex, Chris*/
+
+### Results analysis
+/** Vincenzo, Nemanja, Alex, Chris*/
+
+
 
 ## Velocity
 The division of the tasks was done in accordance with the estimated working time for a person (26 hours). At the end of each sprint, considering the ideal hours and those necessary to complete the tasks, the velocity was evaluated individually and for the team.
@@ -308,6 +316,10 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 | **Overall**           |       **416** |      **0** | **0.00avg** |
 
 ## Conclusions
+
+## Ethical and social considerations
+Whether it concerns online department stores, partner exchanges, communication platforms or search engines: Digital algorithms serve in various contexts to establish, mediate and stabilize social  relationships.  Increasingly,  we  delegate  cultural  practices  of  recommendation  and persuasion to algorithmic decision and recommendation systems. With the Internet of Things,voice-controlled, algorithmic systems are now occupying space in our lives. The importance of algorithms for everyday life thus reaches a new dimension. Algorithms link us with others, they facilitate decisions, awaken needs, move and affect us -all this, it seems, on a rational, scientific basis.
+During the implementation of this research, ethical aspects and social responsibilityhave been taken into account  and  investigated  while designing  the  system’s  architecture. In  a highlydigitalized  era, designing better  and  more  efficient  tools,  that  are  more  tailored  towards  the developer’s needs allows not only to develop software faster but also to developa more bug-free applications that are less prone to errors and unexpectedbehaviors, indirectly contributing to a safer and better society.
 
 ## References
  - [1] [Online]. 
