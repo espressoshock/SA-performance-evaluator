@@ -98,7 +98,7 @@ First draft - _Total 104hrs_.
   - [x] ~~Run testing and assure working deployable version **`3 HRS`**~~
   - [x] ~~Code refactoring, readme and miscs chores **`11 HRS`**~~
   
- - [ ] ![PRESENTATION 19/05/2020](./assets/labels/prm3-label.png) **`104 HRS`**:bookmark:
+ - [ ] ![PRESENTATION 19/05/2020](./assets/labels/presentation-label.png) **`104 HRS`**:bookmark:
   - [ ] Experiment **`16 HRS`**. 
     - [ ] Data collection **`12 HRS`**. 
     - [ ] Analyze **`12 HRS`**.
