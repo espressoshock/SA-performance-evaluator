@@ -120,8 +120,6 @@ At the beginning of the project the requirements and objectives of the first spr
 
 ### Create the development environment 
 /** Vincenzo*/
-### Diagrams
-/** Vincenzo*/
 ### IntelliJ project
 /** Chris*/
 ### Github repository
