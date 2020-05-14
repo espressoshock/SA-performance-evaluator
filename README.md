@@ -308,12 +308,12 @@ At the end of the project, the velocity is evaluated for the whole project. It i
 **Table6**
 | Team Member           | Ideal Hours   | Real Time  |    Velocity |
 | ----------------------| -------------:|-----------:|------------:|
-| Vincenzo Buono        |            26 |          0 |        0.00 |
-| Nemanja Negovanovic   |            26 |          0 |        0.00 |
-| Alex Oachesu          |            26 |          0 |        0.00 |
-| Christopher Schröter  |            26 |          0 |        0.00 |
-| **Team**              |       **104** |      **0** | **0.00avg** |
-| **Overall**           |       **416** |      **0** | **0.00avg** |
+| Vincenzo Buono        |            26 |         33 |        0.79 |
+| Nemanja Negovanovic   |            26 |         34 |        0.76 |
+| Alex Oachesu          |            26 |         33 |        0.79 |
+| Christopher Schröter  |            26 |         34 |        0.76 |
+| **Team**              |       **104** |      **134** |**0.77avg**|
+| **Overall**           |       **416** |      **464** |**0.89avg**|
 
 ## Conclusions
 
