@@ -141,15 +141,4 @@ public class MergeSortRecursive {
     public String getNAME() {
         return "merge";
     }
-
-
-    public static void main(String[] args) {
-        Integer[] arr = {9, 8, 7, 6,7,4,2,9,0,1, 5, 4, 3, 2, 1, 0};
-        MergeSortRecursive m = new MergeSortRecursive();
-        m.sort(arr);
-        for (int x : arr){
-            System.out.println(x);
-        }
-    }
-
 }

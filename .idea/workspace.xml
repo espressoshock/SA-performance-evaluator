@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/quickSort/QuickSortRecursiveFP.java" afterDir="false" />
+    <list default="true" id="25d20ac1-0721-4357-96e2-e646687170e5" name="Default Changelist" comment="Merge sort refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/algorithms/mergeSort/MergeSortRecursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/methods/RunSortingAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/hkr/grp02/da216b/methods/RunSortingAlgorithms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MergeSortRecursive">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.hkr.grp02.da216b.Main" />
       <module name="SA-performance-evaluator" />
@@ -165,17 +167,17 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MergeSortRecursive" />
       <item itemvalue="JUnit.MergeSortRecursiveTest" />
       <item itemvalue="JUnit.All in SA-performance-evaluator" />
       <item itemvalue="JUnit.ShellSortRecursiveTest" />
-      <item itemvalue="Application.MergeSortRecursive" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MergeSortRecursive" />
         <item itemvalue="JUnit.All in SA-performance-evaluator" />
         <item itemvalue="JUnit.ShellSortRecursiveTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MergeSortRecursiveTest" />
       </list>
     </recent_temporary>
@@ -195,6 +197,11 @@
       <workItem from="1588784214166" duration="15836000" />
       <workItem from="1588840228639" duration="499000" />
       <workItem from="1589029018352" duration="14620000" />
+      <workItem from="1589045104313" duration="1021000" />
+      <workItem from="1589216958117" duration="931000" />
+      <workItem from="1589217918025" duration="64000" />
+      <workItem from="1589308217294" duration="105000" />
+      <workItem from="1589457464177" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="bug fixed for merge integer sort">
       <created>1588851473048</created>
@@ -210,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589043677695</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge sort refactoring">
+      <created>1589044600491</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589044600491</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +245,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bug fixed for merge integer sort" />
     <MESSAGE value="Quick Sort recursive implementation &#10;Refactoring algorithms, test units, main, and run." />
-    <option name="LAST_COMMIT_MESSAGE" value="Quick Sort recursive implementation &#10;Refactoring algorithms, test units, main, and run." />
+    <MESSAGE value="Merge sort refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge sort refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1976" y="68" key="#All_in_sa-performance-evaluator" timestamp="1588785185993">
@@ -262,30 +277,30 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1260" y="421" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776211946" />
-    <state x="1363" y="55" key="CommitChangelistDialog2" timestamp="1589043677542">
+    <state x="1363" y="55" key="CommitChangelistDialog2" timestamp="1589216996381">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
-    <state x="1363" y="55" key="CommitChangelistDialog2/35.23.3165.877@35.23.3165.877" timestamp="1589043677542" />
-    <state width="1350" height="727" key="GridCell.Tab.0.bottom" timestamp="1589044050444">
+    <state x="1363" y="55" key="CommitChangelistDialog2/35.23.3165.877@35.23.3165.877" timestamp="1589216996381" />
+    <state width="1350" height="727" key="GridCell.Tab.0.bottom" timestamp="1589308321737">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
-    <state width="1350" height="727" key="GridCell.Tab.0.bottom/35.23.3165.877@35.23.3165.877" timestamp="1589044050444" />
-    <state width="1350" height="727" key="GridCell.Tab.0.center" timestamp="1589044050443">
+    <state width="1350" height="727" key="GridCell.Tab.0.bottom/35.23.3165.877@35.23.3165.877" timestamp="1589308321737" />
+    <state width="1350" height="727" key="GridCell.Tab.0.center" timestamp="1589308321736">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
-    <state width="1350" height="727" key="GridCell.Tab.0.center/35.23.3165.877@35.23.3165.877" timestamp="1589044050443" />
-    <state width="1350" height="727" key="GridCell.Tab.0.left" timestamp="1589044050442">
+    <state width="1350" height="727" key="GridCell.Tab.0.center/35.23.3165.877@35.23.3165.877" timestamp="1589308321736" />
+    <state width="1350" height="727" key="GridCell.Tab.0.left" timestamp="1589308321735">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524553" />
-    <state width="1350" height="727" key="GridCell.Tab.0.left/35.23.3165.877@35.23.3165.877" timestamp="1589044050442" />
-    <state width="1350" height="727" key="GridCell.Tab.0.right" timestamp="1589044050444">
+    <state width="1350" height="727" key="GridCell.Tab.0.left/35.23.3165.877@35.23.3165.877" timestamp="1589308321735" />
+    <state width="1350" height="727" key="GridCell.Tab.0.right" timestamp="1589308321736">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="1340" height="278" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1588776524554" />
-    <state width="1350" height="727" key="GridCell.Tab.0.right/35.23.3165.877@35.23.3165.877" timestamp="1589044050444" />
+    <state width="1350" height="727" key="GridCell.Tab.0.right/35.23.3165.877@35.23.3165.877" timestamp="1589308321736" />
     <state x="1683" y="63" key="SettingsEditor" timestamp="1588788297980">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
@@ -295,10 +310,10 @@
       <screen x="35" y="23" width="3165" height="877" />
     </state>
     <state width="500" height="456" key="SwitcherDM/35.23.3165.877@35.23.3165.877" timestamp="1588790368771" />
-    <state x="1433" y="188" key="Vcs.Push.Dialog.v2" timestamp="1589043680459">
+    <state x="1433" y="188" key="Vcs.Push.Dialog.v2" timestamp="1589044601883">
       <screen x="35" y="23" width="3165" height="877" />
     </state>
-    <state x="1433" y="188" key="Vcs.Push.Dialog.v2/35.23.3165.877@35.23.3165.877" timestamp="1589043680459" />
+    <state x="1433" y="188" key="Vcs.Push.Dialog.v2/35.23.3165.877@35.23.3165.877" timestamp="1589044601883" />
     <state x="759" y="230" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588840438669">
       <screen x="35" y="23" width="3165" height="877" />
     </state>

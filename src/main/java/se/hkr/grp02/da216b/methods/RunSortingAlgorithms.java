@@ -186,7 +186,7 @@ public class RunSortingAlgorithms {
         int[] upLimit = {2, 2, 1000000};
         int[] choices = new int[3];
         String[] prompts = {"Select: \n[1]    Average case\n[2]    Worst Case",
-                "Select: \n[1]    Integer\n[2]    String\n",
+                "Select workload type:\n[1]    Integer\n[2]    String\n",
                 "Select a number between 10 and 1.000.000 \nas the size of your workload ",
                 "\u001B[34m" + "Valid input" + "\u001B[0m",
                 "\u001B[34m" + "Please enter a valid input" + "\u001B[0m"};
