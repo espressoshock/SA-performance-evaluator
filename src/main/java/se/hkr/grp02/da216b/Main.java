@@ -10,8 +10,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = 1;
         while (choice == 1) {
-            new RunSortingAlgorithms().run();
-            System.out.println("Continue ?\n[1]    YES\n[any key]    EXIT!");
+            System.out.println("Select: \n[1]   Print DB results\n[2]   Run tests");
+            try {
+                int answer = Integer.parseInt(scanner.nextLine());
+                if (answer==1){
+                    RunSortingAlgorithms run = new RunSortingAlgorithms();
+                    run.pullFromDB();
+                    run.printDBResults();
+                } else if (answer==2){
+                    new RunSortingAlgorithms().run();
+                }
+            } catch (NumberFormatException e) {
+                choice = 0;
+            }
+
+            System.out.println("Continue ?\n[1]    YES\n[ENTER]    EXIT!");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
                 if (choice != 1)

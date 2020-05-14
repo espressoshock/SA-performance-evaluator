@@ -41,6 +41,7 @@ public class ECRTLEntry {
         this.workload = workload;
     }
 
+    // use this one
     public ECRTLEntry(String rtrResult, String targetlang, String targetOS, String algorithmFK, String workload) {
         this.rtrResult = rtrResult;
         this.targetlang = targetlang;

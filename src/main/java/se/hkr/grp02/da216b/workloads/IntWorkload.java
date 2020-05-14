@@ -5,11 +5,14 @@ import java.util.Arrays;
 
 public class IntWorkload {
     private int[] workload;
+    private String caseName;
 
     public IntWorkload(int caseLevel, int size) {
        if (caseLevel == 1){
+           caseName = "Average_Case";
            averageCase(size);
        }else if(caseLevel == 2){
+           caseName = "Worst_Case";
            worstCase(size);
        }else{
            try {
@@ -43,5 +46,9 @@ public class IntWorkload {
             wrapper[i] = workload[i];
         }
         return wrapper;
+    }
+
+    public String getCaseName() {
+        return caseName;
     }
 }
