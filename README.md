@@ -115,13 +115,13 @@ First draft - _Total 104hrs_.
 ### Create the development environment 
 /** Vincenzo*/
 
-### IntelliJ project
+#### IntelliJ project
 /** Chris*/
 
-### Github repository
+#### Github repository
 /** Chris*/
 
-### GitKraken management
+#### GitKraken management
 /** Chris*/
 
 ### XP development
@@ -136,7 +136,7 @@ At the beginning of the project the requirements and objectives of the first spr
 #### Meetings 
 The meetings had an important role in the structure of the project, being the place where the development decisions were taken together. The sessions had three characteristics: after the meeting with the teachers; during the sprint; before meeting with teachers. After the meeting with the teachers, the teams were established, the tasks were assigned to the teams, deadlines were established. During the sprint the sessions were generally within teams of two, and generally aimed at a breakdown of tasks into subtasks, their individual distribution, and pair-programming (where appropriate) followed by rafactoring. The meetings before the meeting with the teachers aimed at preparing the deliverables, thinking about the objectives, the steps to follow in the next iteration.
 
-### Research on the selected algorithms
+### Research for the selected algorithms
 #### Sorting Algorithms
 **Table 1. Sorting algorithms time complexities [1]**
 
