@@ -7,6 +7,7 @@ import se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive;
 import se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP;
 import se.hkr.grp02.da216b.algorithms.shellSort.ShellSort;
 import se.hkr.grp02.da216b.utilities.Algorithms;
+import se.hkr.grp02.da216b.utilities.Exporter;
 import se.hkr.grp02.da216b.utilities.Result;
 import se.hkr.grp02.da216b.utilities.Timer;
 import se.hkr.grp02.da216b.workloads.IntWorkload;
@@ -15,7 +16,6 @@ import se.hkr.grp02.da216b.workloads.Workload;
 
 import java.sql.Connection;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -65,8 +65,15 @@ public class RunSortingAlgorithms {
 
     /**
      * For each tested algorithm print the average result
+     * if the connection exists, push results to DB
      */
     public void printResults() {
+        Connection connection = null;
+        try{
+           connection = IDBManager.getConnection();
+        }catch (RuntimeException ex){
+            System.out.println("Sorry, no connection!");
+        }
         ArrayList<Long> heapResults = new ArrayList<>();
         ArrayList<Long> mergeResults = new ArrayList<>();
         ArrayList<Long> quickResults = new ArrayList<>();
@@ -74,25 +81,40 @@ public class RunSortingAlgorithms {
         groupResults(heapResults, mergeResults, quickResults, shellResults);
         if (heapResults.size() > 0) {
             System.out.println("The average running time for HeapSort is: " + getAverage(heapResults));
-// push here
-            pushToDB(getAverage(heapResults), "HeapSort");
+            if(connection != null) {
+                pushToDB(getAverage(heapResults), "HeapSort");
+            } else {
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
         if (mergeResults.size() > 0) {
             System.out.println("The average running time for MergeSort is: " + getAverage(mergeResults));
-            pushToDB(getAverage(mergeResults), "MergeSort");
+            if(connection != null) {
+                pushToDB(getAverage(mergeResults), "MergeSort");
+            } else {
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
         if (quickResults.size() > 0) {
             System.out.println("The average running time for QuickSort is: " + getAverage(quickResults));
-            pushToDB(getAverage(quickResults), "QuickSort");
+            if(connection != null) {
+                pushToDB(getAverage(quickResults), "QuickSort");
+            } else {
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
         if (shellResults.size() > 0) {
             System.out.println("The average running time for ShellSort is: " + getAverage(shellResults));
-            pushToDB(getAverage(shellResults), "ShellSort");
+            if(connection != null){
+                pushToDB(getAverage(shellResults), "ShellSort");
+            } else{
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
     }
 
     public void pushToDB(Long result, String algoName) {
-        String[] cases = new String[]{"Average case", "Worst case"};
+
         if (workload.getIntWorkload() != null) {
             IDBManager.insertRTLEntry(new ECRTLEntry(result.toString(), workload.getIntWorkload().getCaseName(), "INT", algoName,
                     String.valueOf(workload.getIntWorkload().getWorkload().length)));
@@ -102,18 +124,27 @@ public class RunSortingAlgorithms {
         }
     }
 
-    public void pullFromDB() {
-        Connection connection = IDBManager.getConnection();
-
-        List<ECRTLEntry> dbResults = IDBManager.getAllRTLEntries();
-        heapSortStringResults = extractResultsByType(dbResults, "STR", "HeapSort");
-        heapSortIntegerResults = extractResultsByType(dbResults, "INT", "HeapSort");
-        quickSortStringResults = extractResultsByType(dbResults, "STR", "QuickSort");
-        quickSortIntegerResults = extractResultsByType(dbResults, "INT", "QuickSort");
-        shellSortStringResults = extractResultsByType(dbResults, "STR", "ShellSort");
-        shellSortIntegerResults = extractResultsByType(dbResults, "INT", "ShellSort");
-        mergeSortStringResults = extractResultsByType(dbResults, "STR", "MergeSort");
-        mergeSortIntegerResults = extractResultsByType(dbResults, "INT", "MergeSort");
+    public boolean pullFromDB() {
+        Connection connection = null;
+        try{
+            connection = IDBManager.getConnection();
+        }catch (RuntimeException ex){
+            System.out.println("Sorry, no connection!");
+        }
+        if (connection != null) {
+            List<ECRTLEntry> dbResults = IDBManager.getAllRTLEntries();
+            heapSortStringResults = extractResultsByType(dbResults, "STR", "HeapSort");
+            heapSortIntegerResults = extractResultsByType(dbResults, "INT", "HeapSort");
+            quickSortStringResults = extractResultsByType(dbResults, "STR", "QuickSort");
+            quickSortIntegerResults = extractResultsByType(dbResults, "INT", "QuickSort");
+            shellSortStringResults = extractResultsByType(dbResults, "STR", "ShellSort");
+            shellSortIntegerResults = extractResultsByType(dbResults, "INT", "ShellSort");
+            mergeSortStringResults = extractResultsByType(dbResults, "STR", "MergeSort");
+            mergeSortIntegerResults = extractResultsByType(dbResults, "INT", "MergeSort");
+        } else {
+            System.out.println("The results cannot be retrieved from our online DB!");
+        }
+        return connection == null;
     }
 
     public void printDBResults() {
@@ -199,8 +230,11 @@ public class RunSortingAlgorithms {
         System.out.println(String.format("%S", "-----------------------------------------------------------------------------------------"));
         for (ECRTLEntry y : fromTo
         ) {
-            System.out.println(String.format("%10s %16s %18s %12s %22s", y.getAlgorithmFK(), y.getTargetOS(), y.getTargetlang(),y.getWorkload(), y.getRtrResult()));
+            System.out.println(String.format("%10s %16s %18s %12s %22s", y.getAlgorithmFK(), y.getTargetOS(), y.getTargetlang(), y.getWorkload(), y.getRtrResult()));
         }
+
+        Exporter ex = new Exporter();
+        ex.exportToExcel(fromTo);
     }
 
     public List<ECRTLEntry> extractResultsByType(List<ECRTLEntry> list, String workloadType, String algorithmType) {

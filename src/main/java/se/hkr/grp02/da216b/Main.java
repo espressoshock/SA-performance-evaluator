@@ -15,7 +15,7 @@ public class Main {
                 int answer = Integer.parseInt(scanner.nextLine());
                 if (answer==1){
                     RunSortingAlgorithms run = new RunSortingAlgorithms();
-                    run.pullFromDB();
+                    if(!run.pullFromDB())
                     run.printDBResults();
                 } else if (answer==2){
                     new RunSortingAlgorithms().run();
