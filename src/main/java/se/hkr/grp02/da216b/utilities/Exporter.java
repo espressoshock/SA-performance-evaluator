@@ -51,7 +51,7 @@ public class Exporter {
         int avgCount = 0;
         int wrstCount = 0;
         for (ECRTLEntry x : list) {
-            if (x.getTargetlang().equals("Average_Case")) {
+            if (x.getCaseType().equals("Average_Case")) {
                 avgCount = getStrCount(sheet, avgCount, x);
             } else {
                 wrstCount = getStrCount(sheet2, wrstCount, x);
@@ -78,9 +78,9 @@ public class Exporter {
         cell = row.createCell(0);
         cell.setCellValue(x.getAlgorithmFK());
         cell2 = row.createCell(1);
-        cell2.setCellValue(x.getTargetOS());
+        cell2.setCellValue(x.getWorkloadType());
         cell3 = row.createCell(2);
-        cell3.setCellValue(x.getTargetlang());
+        cell3.setCellValue(x.getCaseType());
         cell4 = row.createCell(3);
         cell4.setCellValue(x.getWorkload());
         cell5 = row.createCell(4);

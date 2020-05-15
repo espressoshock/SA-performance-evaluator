@@ -230,7 +230,7 @@ public class RunSortingAlgorithms {
         System.out.println(String.format("%S", "-----------------------------------------------------------------------------------------"));
         for (ECRTLEntry y : fromTo
         ) {
-            System.out.println(String.format("%10s %16s %18s %12s %22s", y.getAlgorithmFK(), y.getTargetOS(), y.getTargetlang(), y.getWorkload(), y.getRtrResult()));
+            System.out.println(String.format("%10s %16s %18s %12s %22s", y.getAlgorithmFK(), y.getWorkloadType(), y.getCaseType(), y.getWorkload(), y.getRtrResult()));
         }
 
         Exporter ex = new Exporter();
@@ -240,7 +240,7 @@ public class RunSortingAlgorithms {
     public List<ECRTLEntry> extractResultsByType(List<ECRTLEntry> list, String workloadType, String algorithmType) {
         List<ECRTLEntry> extracted = new ArrayList<>();
         for (ECRTLEntry x : list) {
-            if (x.getTargetOS().equals(workloadType) && x.getAlgorithmFK().equals(algorithmType)) {
+            if (x.getWorkloadType().equals(workloadType) && x.getAlgorithmFK().equals(algorithmType)) {
                 extracted.add(x);
             }
         }
