@@ -141,7 +141,8 @@ First draft - _Total 104hrs_.
 
 ## Method
 ### Create the development environment 
-/** Vincenzo*/
+The arrival of the pandemic COVID-19 brought new challenges
+/** =VINCENZO PASTE HERE*/
 
 #### IntelliJ project
 /** Chris*/
@@ -282,7 +283,8 @@ The algorithm includes only one method. The method sort(); consists of one for l
  - .sort();  **T(N)** = O(logN) + O(NlogN) =  **O(N(log(N))²)**
 
 ### Database implementation
-/** Vincenzo*/
+As part of the core requriements dictated by the course, a relational database has been implemented. It holds the functionality of storing the sorting algorithm simulations with their related metadata. A first design of the database
+/** =VINCENZO PASTE HERE*/
 
 ## Experiment 
 /** Vincenzo, Nemanja, Alex, Chris*/
