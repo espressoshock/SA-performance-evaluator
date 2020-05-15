@@ -4,7 +4,6 @@
 - [Introduction](#introduction)
 - [Aim and purpose](#aim-and-purpose)
   - [Research questions](#research-questions)
-- [Database](#database)
 - [Tasks](#tasks)
 - [Method](#method)
   - [Create the development environment](#create-the-development-environment)
@@ -66,13 +65,14 @@ Currently available algorithms evaluators lack the most important features that 
 2. ~~How 'In-place' strategy can influence the performance of the sorting algorithms?~~
 3. What methodology is the most effective for sorting positive small integers?
 
-## Database
+<!--## Database
 
 For the following project a relational database MySQL v5.7 and the following ER and EER have been designed to fullfil the system requirements
 
 ![ER Rev1A](./assets/DB/SAPEvaluatorDB_ER_medium.PNG)
  
 ![EER Rev1A](./assets/DB/SAPEvaluatorDB_EER_Model_REV1A.PNG)
+ -->
 
 
 ## Tasks
@@ -285,6 +285,12 @@ The algorithm includes only one method. The method sort(); consists of one for l
 ### Database implementation
 As part of the core requriements dictated by the course, a relational database has been implemented. It holds the functionality of storing the sorting algorithm simulations with their related metadata. A first design of the database
 /** =VINCENZO PASTE HERE*/
+
+![ER Rev1A](./assets/DB/SAPEvaluatorDB_ER_medium.PNG)
+ >**Figure X. Conceptual model: EER diagram**
+
+![EER Rev1A](./assets/DB/SAPEvaluatorDB_EER_Model_REV1A.PNG)
+ >**Figure X. MySQL Workbench implementation**
 
 ## Experiment 
 /** Vincenzo, Nemanja, Alex, Chris*/
