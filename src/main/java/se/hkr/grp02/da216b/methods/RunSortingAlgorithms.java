@@ -15,6 +15,7 @@ import se.hkr.grp02.da216b.workloads.StringWorkload;
 import se.hkr.grp02.da216b.workloads.Workload;
 
 import java.sql.Connection;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -132,6 +133,7 @@ public class RunSortingAlgorithms {
             System.out.println("Sorry, no connection!");
         }
         if (connection != null) {
+            System.out.println("Pulling from DB...");
             List<ECRTLEntry> dbResults = IDBManager.getAllRTLEntries();
             heapSortStringResults = extractResultsByType(dbResults, "STR", "HeapSort");
             heapSortIntegerResults = extractResultsByType(dbResults, "INT", "HeapSort");
@@ -175,9 +177,9 @@ public class RunSortingAlgorithms {
         int to = 0;
         switch (choice) {
             case 1:
-                System.out.println("Chose workoad size lower bound: (show all from:)");
+                System.out.println("Chose workload size lower bound: (show all from:)");
                 from = scanner.nextInt();
-                System.out.println("Chose workoad size upper bound: (show all up to:)");
+                System.out.println("Chose workload size upper bound: (show all up to:)");
                 to = scanner.nextInt();
                 if (workloadType.equals("INT")) {
                     printFromTo(from, to, quickSortIntegerResults);
