@@ -58,7 +58,8 @@ public class Exporter {
             }
         }
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a filename to save as excel: ");
+        System.out.println("Results for " + list.get(0).getAlgorithmFK() + " will be saved to the file directory " +"\u001B[34m" + "\\exports" + "\u001B[0m");
+        System.out.println("Please enter a filename to save as excel file format: ");
         fileName = scanner.nextLine();
         try (FileOutputStream outputStream = new FileOutputStream("exports/"+fileName + ".xls")) {
             wb.write(outputStream);
