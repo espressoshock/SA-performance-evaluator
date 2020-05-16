@@ -83,9 +83,9 @@ public class Exporter {
         cell3 = row.createCell(2);
         cell3.setCellValue(x.getCaseType());
         cell4 = row.createCell(3);
-        cell4.setCellValue(x.getWorkload());
+        cell4.setCellValue(Long.parseLong(x.getWorkload()));
         cell5 = row.createCell(4);
-        cell5.setCellValue(x.getRtrResult());
+        cell5.setCellValue(Long.parseLong(x.getRtrResult()));
         return strCount;
     }
 }
