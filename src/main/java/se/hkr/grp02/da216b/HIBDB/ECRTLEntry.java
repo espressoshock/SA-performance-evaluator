@@ -19,11 +19,11 @@ public class ECRTLEntry {
     @Column(name = "RTRestult")
     String rtrResult;
 
-    @Column(name = "targetlang")
-    String targetlang;
+    @Column(name = "caseType")
+    String caseType;
 
-    @Column(name = "targetOS")
-    String targetOS;
+    @Column(name = "workloadType")
+    String workloadType;
 
     @Column(name = "Algorithms_name")
     String algorithmFK;
@@ -31,20 +31,21 @@ public class ECRTLEntry {
     @Column(name = "workload")
     String workload;
 
-    public ECRTLEntry(int id, Timestamp timestamp, String rtrResult, String targetlang, String targetOS, String algorithmFK, String workload) {
+    public ECRTLEntry(int id, Timestamp timestamp, String rtrResult, String caseType, String workloadType, String algorithmFK, String workload) {
         this.id = id;
         this.timestamp = timestamp;
         this.rtrResult = rtrResult;
-        this.targetlang = targetlang;
-        this.targetOS = targetOS;
+        this.caseType = caseType;
+        this.workloadType = workloadType;
         this.algorithmFK = algorithmFK;
         this.workload = workload;
     }
 
-    public ECRTLEntry(String rtrResult, String targetlang, String targetOS, String algorithmFK, String workload) {
+    // use this one
+    public ECRTLEntry(String rtrResult, String caseType, String workloadType, String algorithmFK, String workload) {
         this.rtrResult = rtrResult;
-        this.targetlang = targetlang;
-        this.targetOS = targetOS;
+        this.caseType = caseType;
+        this.workloadType = workloadType;
         this.algorithmFK = algorithmFK;
         this.workload = workload;
     }
@@ -73,20 +74,20 @@ public class ECRTLEntry {
         this.rtrResult = rtrResult;
     }
 
-    public String getTargetlang() {
-        return targetlang;
+    public String getCaseType() {
+        return caseType;
     }
 
-    public void setTargetlang(String targetlang) {
-        this.targetlang = targetlang;
+    public void setCaseType(String caseType) {
+        this.caseType = caseType;
     }
 
-    public String getTargetOS() {
-        return targetOS;
+    public String getWorkloadType() {
+        return workloadType;
     }
 
-    public void setTargetOS(String targetOS) {
-        this.targetOS = targetOS;
+    public void setWorkloadType(String workloadType) {
+        this.workloadType = workloadType;
     }
 
     public String getWorkload() {

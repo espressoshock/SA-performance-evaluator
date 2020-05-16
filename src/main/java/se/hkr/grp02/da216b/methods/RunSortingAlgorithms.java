@@ -1,17 +1,23 @@
 package se.hkr.grp02.da216b.methods;
 
+import se.hkr.grp02.da216b.DAL.IDBManager;
+import se.hkr.grp02.da216b.HIBDB.ECRTLEntry;
 import se.hkr.grp02.da216b.algorithms.heapSort.HeapSortRecursive;
 import se.hkr.grp02.da216b.algorithms.mergeSort.MergeSortRecursive;
 import se.hkr.grp02.da216b.algorithms.quickSort.QuickSortRecursiveFP;
 import se.hkr.grp02.da216b.algorithms.shellSort.ShellSort;
 import se.hkr.grp02.da216b.utilities.Algorithms;
+import se.hkr.grp02.da216b.utilities.Exporter;
 import se.hkr.grp02.da216b.utilities.Result;
 import se.hkr.grp02.da216b.utilities.Timer;
 import se.hkr.grp02.da216b.workloads.IntWorkload;
 import se.hkr.grp02.da216b.workloads.StringWorkload;
 import se.hkr.grp02.da216b.workloads.Workload;
 
+import java.sql.Connection;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class RunSortingAlgorithms {
@@ -20,6 +26,17 @@ public class RunSortingAlgorithms {
     private ArrayList<Result> results = new ArrayList<>();
     private Timer timer = new Timer();
     private Scanner scanner = new Scanner(System.in);
+    //////////******Result Lists from DB******///////////////
+    List<ECRTLEntry> heapSortStringResults;
+    List<ECRTLEntry> heapSortIntegerResults;
+    List<ECRTLEntry> shellSortStringResults;
+    List<ECRTLEntry> shellSortIntegerResults;
+    List<ECRTLEntry> mergeSortStringResults;
+    List<ECRTLEntry> mergeSortIntegerResults;
+    List<ECRTLEntry> quickSortStringResults;
+    List<ECRTLEntry> quickSortIntegerResults;
+
+    //////////******Result Lists from DB******///////////////
 
     /**
      * running one test
@@ -49,8 +66,15 @@ public class RunSortingAlgorithms {
 
     /**
      * For each tested algorithm print the average result
+     * if the connection exists, push results to DB
      */
     public void printResults() {
+        Connection connection = null;
+        try{
+           connection = IDBManager.getConnection();
+        }catch (RuntimeException ex){
+            System.out.println("Sorry, no connection!");
+        }
         ArrayList<Long> heapResults = new ArrayList<>();
         ArrayList<Long> mergeResults = new ArrayList<>();
         ArrayList<Long> quickResults = new ArrayList<>();
@@ -58,16 +82,171 @@ public class RunSortingAlgorithms {
         groupResults(heapResults, mergeResults, quickResults, shellResults);
         if (heapResults.size() > 0) {
             System.out.println("The average running time for HeapSort is: " + getAverage(heapResults));
+            if(connection != null) {
+                pushToDB(getAverage(heapResults), "HeapSort");
+            } else {
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
         if (mergeResults.size() > 0) {
             System.out.println("The average running time for MergeSort is: " + getAverage(mergeResults));
+            if(connection != null) {
+                pushToDB(getAverage(mergeResults), "MergeSort");
+            } else {
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
         if (quickResults.size() > 0) {
             System.out.println("The average running time for QuickSort is: " + getAverage(quickResults));
+            if(connection != null) {
+                pushToDB(getAverage(quickResults), "QuickSort");
+            } else {
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
         if (shellResults.size() > 0) {
-            System.out.println("The average running time for HeapSort is: " + getAverage(shellResults));
+            System.out.println("The average running time for ShellSort is: " + getAverage(shellResults));
+            if(connection != null){
+                pushToDB(getAverage(shellResults), "ShellSort");
+            } else{
+                System.out.println("The result cannot be pushed our online DB!");
+            }
         }
+    }
+
+    public void pushToDB(Long result, String algoName) {
+
+        if (workload.getIntWorkload() != null) {
+            IDBManager.insertRTLEntry(new ECRTLEntry(result.toString(), workload.getIntWorkload().getCaseName(), "INT", algoName,
+                    String.valueOf(workload.getIntWorkload().getWorkload().length)));
+        } else if (workload.getStringWorkload() != null) {
+            IDBManager.insertRTLEntry(new ECRTLEntry(result.toString(), workload.getStringWorkload().getCaseName(), "STR", algoName,
+                    String.valueOf(workload.getStringWorkload().getWorkload().length)));
+        }
+    }
+
+    public boolean pullFromDB() {
+        Connection connection = null;
+        try{
+            connection = IDBManager.getConnection();
+        }catch (RuntimeException ex){
+            System.out.println("Sorry, no connection!");
+        }
+        if (connection != null) {
+            System.out.println("Pulling from DB...");
+            List<ECRTLEntry> dbResults = IDBManager.getAllRTLEntries();
+            heapSortStringResults = extractResultsByType(dbResults, "STR", "HeapSort");
+            heapSortIntegerResults = extractResultsByType(dbResults, "INT", "HeapSort");
+            quickSortStringResults = extractResultsByType(dbResults, "STR", "QuickSort");
+            quickSortIntegerResults = extractResultsByType(dbResults, "INT", "QuickSort");
+            shellSortStringResults = extractResultsByType(dbResults, "STR", "ShellSort");
+            shellSortIntegerResults = extractResultsByType(dbResults, "INT", "ShellSort");
+            mergeSortStringResults = extractResultsByType(dbResults, "STR", "MergeSort");
+            mergeSortIntegerResults = extractResultsByType(dbResults, "INT", "MergeSort");
+        } else {
+            System.out.println("The results cannot be retrieved from our online DB!");
+        }
+        return connection == null;
+    }
+
+    public void printDBResults() {
+        int choice = 0;
+        System.out.println("Chose option: ");
+        System.out.println("1. print results for Integer sorts");
+        System.out.println("2. print results for String sorts");
+        choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                printResultMenu("INT");
+                break;
+            case 2:
+                printResultMenu("STR");
+                break;
+        }
+    }
+
+    public void printResultMenu(String workloadType) {
+        int choice = 0;
+        System.out.println("Chosen workload type:" + workloadType + "\nChose option: ");
+        System.out.println("1. print results for QuickSort");
+        System.out.println("2. print results for ShellSort");
+        System.out.println("3. print results for MergeSort");
+        System.out.println("4. print results for HeapSort");
+        choice = scanner.nextInt();
+        int from = 0;
+        int to = 0;
+        switch (choice) {
+            case 1:
+                System.out.println("Chose workload size lower bound: (show all from:)");
+                from = scanner.nextInt();
+                System.out.println("Chose workload size upper bound: (show all up to:)");
+                to = scanner.nextInt();
+                if (workloadType.equals("INT")) {
+                    printFromTo(from, to, quickSortIntegerResults);
+                } else if (workloadType.equals("STR"))
+                    printFromTo(from, to, quickSortStringResults);
+                break;
+            case 2:
+                System.out.println("Chose workload size lower bound: (show all from:)");
+                from = scanner.nextInt();
+                System.out.println("Chose workload size upper bound: (show all up to:)");
+                to = scanner.nextInt();
+                if (workloadType.equals("INT")) {
+                    printFromTo(from, to, shellSortIntegerResults);
+                } else if (workloadType.equals("STR"))
+                    printFromTo(from, to, shellSortStringResults);
+                break;
+            case 3:
+                System.out.println("Chose workload size lower bound: (show all from:)");
+                from = scanner.nextInt();
+                System.out.println("Chose workload size upper bound: (show all up to:)");
+                to = scanner.nextInt();
+                if (workloadType.equals("INT")) {
+                    printFromTo(from, to, mergeSortIntegerResults);
+                } else if (workloadType.equals("STR"))
+                    printFromTo(from, to, mergeSortStringResults);
+                break;
+            case 4:
+                System.out.println("Chose workload size lower bound: (show all from:)");
+                from = scanner.nextInt();
+                System.out.println("Chose workload size upper bound: (show all up to:)");
+                to = scanner.nextInt();
+                if (workloadType.equals("INT")) {
+                    printFromTo(from, to, heapSortIntegerResults);
+                } else if (workloadType.equals("STR"))
+                    printFromTo(from, to, heapSortStringResults);
+                break;
+        }
+    }
+
+    public void printFromTo(int from, int to, List<ECRTLEntry> dbResults) {
+        List<ECRTLEntry> fromTo = new ArrayList<>();
+        for (ECRTLEntry x : dbResults
+        ) {
+            if (Long.valueOf(x.getWorkload()) >= from && Long.valueOf(x.getWorkload()) <= to) {
+                fromTo.add(x);
+            }
+        }
+        System.out.println(String.format("%S", "-----------------------------------------------------------------------------------------"));
+        System.out.println(String.format("%14s %16s %14s %16s %20s", "ALGORITHM NAME", "WORKLOAD TYPE", "CASE TYPE", "WORKLOAD SIZE", "RUNNING TIME"));
+        System.out.println(String.format("%S", "-----------------------------------------------------------------------------------------"));
+        for (ECRTLEntry y : fromTo
+        ) {
+            System.out.println(String.format("%10s %16s %18s %12s %22s", y.getAlgorithmFK(), y.getWorkloadType(), y.getCaseType(), y.getWorkload(), y.getRtrResult()));
+        }
+
+        Exporter ex = new Exporter();
+        ex.exportToExcel(fromTo);
+    }
+
+    public List<ECRTLEntry> extractResultsByType(List<ECRTLEntry> list, String workloadType, String algorithmType) {
+        List<ECRTLEntry> extracted = new ArrayList<>();
+        for (ECRTLEntry x : list) {
+            if (x.getWorkloadType().equals(workloadType) && x.getAlgorithmFK().equals(algorithmType)) {
+                extracted.add(x);
+            }
+        }
+        return extracted;
     }
 
     /**
@@ -118,7 +297,7 @@ public class RunSortingAlgorithms {
                 if (choice < 1 || choice > 20) {
                     System.out.println("\u001B[34m" + "Please choose between 1 and 20 iterations" + "\u001B[0m");
                     integer = true;
-                }else{
+                } else {
                     System.out.println("\u001B[34m" + "Valid input" + "\u001B[0m");
                 }
             } catch (NumberFormatException e) {
@@ -140,7 +319,7 @@ public class RunSortingAlgorithms {
         if (algorithms.getHeapSort() != null) {
             if (workload.getIntWorkload() != null) {
                 timer.startTimer();
-                //algorithms.getHeapSort().sort(workload.getIntWorkload().getWorkload());
+                algorithms.getHeapSort().sort(workload.getIntWorkload().getIntegerWorkload());
                 timer.stopTimer();
                 results.add(new Result(timer.getTime(), algorithms.getHeapSort().getNAME(), workload));
             } else if (workload.getStringWorkload() != null) {
@@ -179,7 +358,7 @@ public class RunSortingAlgorithms {
         if (algorithms.getShellSort() != null) {
             if (workload.getIntWorkload() != null) {
                 timer.startTimer();
-                //algorithms.getShellSort().sort(workload.getIntWorkload().getWorkload());
+                algorithms.getShellSort().sort(workload.getIntWorkload().getIntegerWorkload());
                 timer.stopTimer();
                 results.add(new Result(timer.getTime(), algorithms.getShellSort().getNAME(), workload));
             } else if (workload.getStringWorkload() != null) {
@@ -203,24 +382,24 @@ public class RunSortingAlgorithms {
                 "Select a number between 10 and 1.000.000 \nas the size of your workload ",
                 "\u001B[34m" + "Valid input" + "\u001B[0m",
                 "\u001B[34m" + "Please enter a valid input" + "\u001B[0m"};
-       for(int i = 0; i < 3; i++) {
-           System.out.println(prompts[i]);
-           do {
-               try {
-                   integer = false;
-                   choices[i] = Integer.parseInt(scanner.nextLine());
-                   if (choices[i] < 1 || choices[i] > upLimit[i]) {
-                       System.out.println(prompts[4]);
-                       integer = true;
-                   }else{
-                       System.out.println(prompts[3]);
-                   }
-               } catch (NumberFormatException e) {
-                   System.out.println(prompts[4]);
-                   integer = true;
-               }
-           } while (integer);
-       }
+        for (int i = 0; i < 3; i++) {
+            System.out.println(prompts[i]);
+            do {
+                try {
+                    integer = false;
+                    choices[i] = Integer.parseInt(scanner.nextLine());
+                    if (choices[i] < 1 || choices[i] > upLimit[i]) {
+                        System.out.println(prompts[4]);
+                        integer = true;
+                    } else {
+                        System.out.println(prompts[3]);
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println(prompts[4]);
+                    integer = true;
+                }
+            } while (integer);
+        }
         System.out.println("Creating the workload ...");
         createWorkload(choices[0], choices[1], choices[2]);
     }
@@ -259,7 +438,7 @@ public class RunSortingAlgorithms {
                 if (choice < 1 || choice > 15) {
                     System.out.println("\u001B[34m" + "Please enter a valid input" + "\u001B[0m");
                     integer = true;
-                }else{
+                } else {
                     System.out.println("\u001B[34m" + "Valid input" + "\u001B[0m");
                 }
             } catch (NumberFormatException e) {

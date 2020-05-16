@@ -4,11 +4,13 @@ import java.security.SecureRandom;
 
 public class StringWorkload {
     private String[] workload;
-
+    private String caseName;
     public StringWorkload(int caseLevel, int size) {
         if (caseLevel == 1){
+            caseName = "Average_Case";
             averageCase(size);
         }else if(caseLevel == 2){
+            caseName = "Worst_Case";
             worstCase(size);
         }else{
             try {
@@ -58,5 +60,9 @@ public class StringWorkload {
 
     public String[] getWorkload() {
         return workload;
+    }
+
+    public String getCaseName() {
+        return caseName;
     }
 }

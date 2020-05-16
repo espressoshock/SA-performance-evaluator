@@ -211,8 +211,8 @@ public interface IDBManager {
         try {
             PreparedStatement ps = connection.prepareStatement("INSERT INTO rtlentries VALUES (NULL, NULL,?,?,?,?,?)");
             ps.setString(1, rtlEntry.getRtrResult());
-            ps.setString(2, rtlEntry.getTargetlang());
-            ps.setString(3, rtlEntry.getTargetOS());
+            ps.setString(2, rtlEntry.getCaseType());
+            ps.setString(3, rtlEntry.getWorkloadType());
             ps.setString(4, rtlEntry.getAlgorithmFK());
             ps.setString(5, rtlEntry.getWorkload());
 
@@ -240,8 +240,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
@@ -273,8 +273,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
@@ -306,8 +306,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
@@ -320,17 +320,17 @@ public interface IDBManager {
     }
 
     /***
-     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided targetlang
-     * @param targetLang
+     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided caseType
+     * @param caseType
      * @return
      */
-    public static List<ECRTLEntry> getAllRTLEntriesWithTargetlang(String targetLang) {
+    public static List<ECRTLEntry> getAllRTLEntriesWithCaseType(String caseType) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
 
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where targetlang=?");
-            ps.setString(1, targetLang);
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where caseType=?");
+            ps.setString(1, caseType);
 
             ResultSet resultSet = ps.executeQuery();
 
@@ -339,8 +339,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
@@ -353,17 +353,17 @@ public interface IDBManager {
     }
 
     /***
-     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided targetOS
-     * @param targetOS targetOS to filter entries by
-     * @return All entries filtered by targeOS
+     * [GET][MULTIPLE-ENTRY] Get all ECRTLEntry(s) with provided workloadType
+     * @param workloadType workloadType to filter entries by
+     * @return All entries filtered by workloadType
      */
-    public static List<ECRTLEntry> getAllRTLEntriesWithTargetOS(String targetOS) {
+    public static List<ECRTLEntry> getAllRTLEntriesWithWorkloadType(String workloadType) {
         Connection connection = IDBManager.getConnection();
         List<ECRTLEntry> ECRTLEntries = new ArrayList<>();
 
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where targetOS=?");
-            ps.setString(1, targetOS);
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rtlentries where workloadType=?");
+            ps.setString(1, workloadType);
 
             ResultSet resultSet = ps.executeQuery();
 
@@ -372,8 +372,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
@@ -405,8 +405,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
@@ -440,8 +440,8 @@ public interface IDBManager {
                                 resultSet.getInt("id"),
                                 resultSet.getTimestamp("timestamp"),
                                 resultSet.getString("RTResult"),
-                                resultSet.getString("targetlang"),
-                                resultSet.getString("targetOS"),
+                                resultSet.getString("caseType"),
+                                resultSet.getString("workloadType"),
                                 resultSet.getString("Algorithms_name"),
                                 resultSet.getString("workload")
                         )
