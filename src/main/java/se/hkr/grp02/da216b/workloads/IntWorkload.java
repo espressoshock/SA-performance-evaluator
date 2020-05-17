@@ -25,7 +25,7 @@ public class IntWorkload {
     public void averageCase(int size){
         this.workload = new int[size];
         for (int i = 0; i < size; i++){
-            workload[i] = new SecureRandom().nextInt(1000);
+            workload[i] = new SecureRandom().nextInt(size);
         }
     }
     public void worstCase(int size){
