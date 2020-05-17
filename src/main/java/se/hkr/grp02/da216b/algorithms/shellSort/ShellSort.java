@@ -22,7 +22,6 @@ public class ShellSort<E extends Comparable<? super E>> {
                 sortedArray[j] = tmp;
             }
         }
-        System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
     }
 }
